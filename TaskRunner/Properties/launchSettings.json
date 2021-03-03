@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TaskRunner": {
+      "commandName": "Project",
+      "commandLineArgs": "..\\..\\..\\Taskrunner.json\""
+    }
+  }
+}

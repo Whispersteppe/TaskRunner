@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="TaskRunner.View.ConfigView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TaskRunner.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" Content="Log Base Path" />
+        <Label Grid.Column="0" Grid.Row="1" Content="Log Level" />
+        <Label Grid.Column="0" Grid.Row="2" Content="Days to Retain" />
+        <Label Grid.Column="0" Grid.Row="3" Content="Quartz Max Concurrency" />
+        <Label Grid.Column="0" Grid.Row="4" Content="Job Store" />
+        <Label Grid.Column="0" Grid.Row="5" Content="Instance Name" />
+        <Label Grid.Column="0" Grid.Row="6" Content="Default Cron Expression" />
+
+        <TextBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left"  MinWidth="400" Text="{Binding ConfigData.LogBasePath}" />
+        <ComboBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left"  ItemsSource="{Binding ConfigData.AllowedLogLevels}" SelectedItem="{Binding ConfigData.LogMinimumLogLevel}">
+        </ComboBox>
+        <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" MinWidth="25"  Text="{Binding ConfigData.LogDaysToRetain}" />
+        <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" MinWidth="25"  Text="{Binding ConfigData.QuartzMaxConcurrency}" />
+        <TextBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left"  MinWidth="200"  Text="{Binding ConfigData.QuartzJobStoreType}" />
+        <TextBox Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left"  MinWidth="200" Text="{Binding ConfigData.QuartzInstanceName}" />
+        <TextBox Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left"  MinWidth="150" Text="{Binding ConfigData.DefaultCronExpression}" />
+    </Grid>
+</UserControl>

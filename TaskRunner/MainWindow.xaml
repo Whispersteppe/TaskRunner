@@ -1,0 +1,62 @@
+﻿<Window x:Class="TaskRunner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskRunner"
+        xmlns:taskModel="clr-namespace:TaskRunner.Model.RunnerTask"
+        xmlns:view="clr-namespace:TaskRunner.View"
+        mc:Ignorable="d"
+        Title="Task Runner" Height="450" Width="800" 
+        Loaded="Window_Loaded" 
+        Closing="Window_Closing">
+
+    <DockPanel LastChildFill="True">
+        
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Import" Click="Import_TaskFile_Click" />
+            </MenuItem>
+            <MenuItem Header="Tools">
+                <MenuItem Header="Configuration" Click="Show_Configuration_Click" />
+                <MenuItem Header="Templates" Click="Show_Templates_Click" />
+            </MenuItem>
+            <MenuItem Header="Help"></MenuItem>
+        </Menu>
+        
+        <StatusBar DockPanel.Dock="Bottom">
+            <TextBlock Text="Up Time:" />
+            <TextBlock Text="{Binding Path=Scheduler.TotalUpTimeString}" />
+            <Separator />
+            <TextBlock Text="Launches:" />
+            <TextBlock Text="{Binding Path=Scheduler.TotalTaskLaunches}" />
+            <Separator />
+            <TextBlock Text="Next Launch:" />
+            <TextBlock Text="{Binding Path=Scheduler.NextTaskLaunch, StringFormat=M/d/yyyy HH:mm:ss}" />
+            <Separator />
+            <TextBlock Text="Last Launch:" />
+            <TextBlock Text="{Binding Path=Scheduler.LastTaskLaunch, StringFormat=M/d/yyyy HH:mm:ss}" />
+            <Separator />
+            <TextBlock Text="Countdown:" />
+            <TextBlock Text="{Binding Path=Scheduler.NextTaskLaunchCountdown,  StringFormat=\{0:h\\:mm\\:ss\}}" />
+
+        </StatusBar>
+        
+        <TabControl>
+            
+            <TabItem Header="Tasks">
+                <view:TaskListView />
+            </TabItem>
+            
+            <TabItem Header="Log">
+                <view:LogView />
+            </TabItem>
+            
+            <TabItem Header="Status">
+                <view:StatusView />
+            </TabItem>
+            
+        </TabControl>
+
+    </DockPanel>
+</Window>

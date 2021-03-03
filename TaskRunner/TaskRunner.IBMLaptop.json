@@ -1,0 +1,1088 @@
+{
+  "LastSave": "2020-09-15T10:22:41.6286747-05:00",
+  "Defaults": {
+    "NewTaskCronExpression": "0 0 8 ? * MON-FRI",
+    "MainWindow": {
+      "Left": 619.0,
+      "Top": -820.0,
+      "Width": 944.0,
+      "Height": 479.0
+    }
+  },
+  "FileLogger": {
+    "BasePath": "C:\\projects\\RoadKillHippo\\TaskRunner\\Taskrunner\\bin\\Release\\netcoreapp3.1\\LogFiles",
+    "FileName": "",
+    "MinimumLogLevel": "Information",
+    "DaysToRetain": 3
+  },
+  "QuartzFactory": {
+    "MaxConcurrency": 3,
+    "InstanceName": "Test Config",
+    "JobStoreType": "Quartz.Simpl.RAMJobStore, Quartz"
+  },
+  "Templates": [
+    {
+      "TemplateType": "FileExecute",
+      "ExecutablePath": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+      "CommandLine": "-new-tab {0}",
+      "Name": "FirefoxUrl",
+      "ID": 1,
+      "Properties": [
+        {
+          "Name": "Url",
+          "DefaultValue": "https://www.google.com",
+          "Order": 1
+        }
+      ]
+    },
+    {
+      "TemplateType": "FileExecute",
+      "ExecutablePath": "C:\\Program Files (x86)\\Notepad++\\notepad++.exe",
+      "CommandLine": "{0}",
+      "Name": "Notepad++",
+      "ID": 2,
+      "Properties": [
+        {
+          "Name": "FilePath",
+          "DefaultValue": "c:\\Test.txt",
+          "Order": 1
+        }
+      ]
+    },
+    {
+      "TemplateType": "FileExecute",
+      "ExecutablePath": "C:\\Program Files\\Microsoft Office\\root\\Office16\\visio.exe",
+      "CommandLine": "\"{Path}\\{FileName}\"",
+      "Name": "Visio",
+      "ID": 5,
+      "Properties": [
+        {
+          "Name": "Path",
+          "DefaultValue": "c:\\",
+          "Order": 1
+        },
+        {
+          "Name": "FileName",
+          "DefaultValue": "visio.vsd",
+          "Order": 2
+        }
+      ]
+    },
+    {
+      "TemplateType": "FileExecute",
+      "ExecutablePath": "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+      "CommandLine": "\"{Path}\\{FileName}\"",
+      "Name": "Word",
+      "ID": 6,
+      "Properties": [
+        {
+          "Name": "Path",
+          "DefaultValue": "c:\\",
+          "Order": 1
+        },
+        {
+          "Name": "FileName",
+          "DefaultValue": "word.docx",
+          "Order": 2
+        }
+      ]
+    }
+  ],
+  "Tasks": [
+    {
+      "ChildItems": [
+        {
+          "TemplateID": 1,
+          "IsActive": false,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 7 ? * 1,2,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.8485666-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Toodledo",
+          "Properties": {
+            "Url": "https://tasks.toodledo.com/main/-9"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": false,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 7 ? * 1,2,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.8666824-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Inoreader",
+          "Properties": {
+            "Url": "http://www.inoreader.com/dashboard"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": false,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 7 ? * 1,2,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.8790307-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Acurite",
+          "Properties": {
+            "Url": "https://www.myacurite.com/#/dashboard"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": false,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 7 ? * 1,2,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.8879451-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Calendar",
+          "Properties": {
+            "Url": "https://calendar.google.com/calendar/r/week"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 9 ? * 2,3,4,5,1"
+          },
+          "LastExecution": "2020-09-15T10:14:44.8975287-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "RoadkillHippo Work",
+          "Properties": {
+            "Url": "https://roadkillhippo.visualstudio.com/MailCat"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": false,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 30 7 ? * 2,1,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9007988-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Home Email",
+          "Properties": {
+            "Url": "https://email.ionos.com"
+          }
+        }
+      ],
+      "Name": "Personal",
+      "Properties": {}
+    },
+    {
+      "ChildItems": [
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 16 ? * 1,2,3"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9105944-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Wundermap",
+          "Properties": {
+            "Url": "https://www.wunderground.com/wundermap?lat=33.181&lon=-96.666&zoom=10"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 31 14 ? * 1,4"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9151109-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Tripit",
+          "Properties": {
+            "Url": "https://www.tripit.com/home"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 30 14 ? * 4"
+          },
+          "LastExecution": "2020-09-15T10:14:44.919418-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Google Maps - Riviera",
+          "Properties": {
+            "Url": "https://www.google.com/maps/dir/1609+Chessington+Lane,+McKinney,+TX/Disney's+Riviera+Resort,+1080+Esplanade+Ave,+Lake+Buena+Vista,+FL+32830/@30.6923007,-93.6549823,6z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x864c1407d2cde95d:0xa96f31975f79703!2m2!1d-96.6664431!2d33.1809807!1m5!1m1!1s0x88dd7f4dc585bb2f:0xb307732b9ad696e9!2m2!1d-81.5416183!2d28.3659635!5m1!1e1"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 31 14 ? * 4"
+          },
+          "LastExecution": "2020-09-15T10:14:44.920623-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Flight Delay Info",
+          "Properties": {
+            "Url": "https://www.fly.faa.gov/flyfaa/usmap.jsp"
+          }
+        }
+      ],
+      "Name": "Travel",
+      "Properties": {}
+    },
+    {
+      "ChildItems": [
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 7 ? * 1,2,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9216469-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "IBM Mail",
+          "Properties": {
+            "Url": "https://mail.notes.na.collabserv.com/verse"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 7 ? * 1,2,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9226557-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "W3",
+          "Properties": {
+            "Url": "https://w3.ibm.com/#home"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 9 ? * 2,4"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9237922-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "BlueMix",
+          "Properties": {
+            "Url": "https://console.bluemix.net/dashboard/apps/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 1 9 ? * 4,2"
+          },
+          "LastExecution": "2020-09-15T10:14:44.925241-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "CodeBlue",
+          "Properties": {
+            "Url": "https://github.ibm.com/codeblue"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 9 ? * 1,3,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9259987-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "My Communities",
+          "Properties": {
+            "Url": "https://w3-connections.ibm.com/communities/service/html/mycommunities"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 8 ? * 1,2,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.927167-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Box",
+          "Properties": {
+            "Url": "https://ibm.ent.box.com/folder/0"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 8 ? * 2"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9285784-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "IBM 1/3/9",
+          "Properties": {
+            "Url": "https://w3.ibm.com/1-3-9/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 15 ? * 5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9293542-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Beneplace",
+          "Properties": {
+            "Url": "http://www2.beneplace.com/home.jsp?Client_UserId=46944582"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 14 ? * 2,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.930608-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Vitality",
+          "Properties": {
+            "Url": "https://www.powerofvitality.com/vitality/home"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 10 ? * 2"
+          },
+          "LastExecution": "2020-09-15T10:14:44.931318-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "GBS Cloud Application",
+          "Properties": {
+            "Url": "https://w3-connections.ibm.com/wikis/home?lang=en#!/wiki/W506be2c4e442_4094_9cde_13052df14f34"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 14 ? * 5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9331315-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Acclaim",
+          "Properties": {
+            "Url": "https://www.youracclaim.com/user/chris-arterburn"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 10 ? * 5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9343286-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "IBM Asset sharing",
+          "Properties": {
+            "Url": "https://w3-03.ibm.com/services/lighthouse/asset-sharing-platform"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 14 ? * 4"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9351537-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Vacation Planner",
+          "Properties": {
+            "Url": "https://vplanner.dst.ibm.com/mycalendar/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 20 8 ? * 1,2,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9359305-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "IBM News",
+          "Properties": {
+            "Url": "https://ibmernews.voicestorm.com/member/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 10 ? * 5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9366947-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "GBS Progression Criteria",
+          "Properties": {
+            "Url": "https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/W902e03401bb8_45f4_a050_d23ab8ed019a/page/GBS%20Progression%20Criteria"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 30 8 ? * 5,2"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9374596-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "My Score",
+          "Properties": {
+            "Url": "https://b03aciwas014.ahe.boulder.ibm.com/myscore/practitioner.do"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 14 ? * 2,5,4"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9500723-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "People Skills",
+          "Properties": {
+            "Url": "https://yourlearning.ibm.com/#roles-skills/people_skills"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 10 10 ? * 5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.950836-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "ACE",
+          "Properties": {
+            "Url": "https://ace.w3bmix.ibm.com/#/app/inbox"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 11 ? * 4"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9515063-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "IBM Time",
+          "Properties": {
+            "Url": "https://time.ibm.com"
+          }
+        }
+      ],
+      "Name": "IBM",
+      "Properties": {}
+    },
+    {
+      "ChildItems": [
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 8 ? * 1,2,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9522849-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "IBM Education",
+          "Properties": {
+            "Url": "https://yourlearning.ibm.com/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 10 ? * 5,2,3,4,1"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9530746-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Lighthouse",
+          "Properties": {
+            "Url": "https://w3-03.ibm.com/services/lighthouse/?section=search"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 30 8 ? * 2,1,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9538389-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Earning Advocacy",
+          "Properties": {
+            "Url": "http://lpb-pa.w3bmix.ibm.com/#/plan/review/1532537692920"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 13 ? * 4"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9545585-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Think Academy",
+          "Properties": {
+            "Url": "https://w3.ibm.com/thinkacademy/index.html#/home"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 13 ? * 2,4"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9552856-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Safari Books",
+          "Properties": {
+            "Url": "https://www.safaribooksonline.com/home/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 14 ? * 5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9563492-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "L&K Progress",
+          "Properties": {
+            "Url": "https://w3-03.ibm.com/services/lighthouse/participate/points"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 14 ? * 5,3,1"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9582498-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Design Thinking",
+          "Properties": {
+            "Url": "https://www.ibm.com/design/thinking/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 30 8 ? * 1,2,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9595335-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "IBM MS Badges",
+          "Properties": {
+            "Url": "https://w3-connections.ibm.com/wikis/home?lang=en#!/wiki/IBM%20-%20Microsoft%20Practice%20Talent%20Framework/page/Microsoft%20Practice%20-%20Badge%20Program"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 15 8 ? * 5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9603791-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "IBM Required Learning",
+          "Properties": {
+            "Url": "https://yourlearning.ibm.com/#channel/CNL_LCB_1547047452513"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 30 8 ? * 5,3"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9613882-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Future Skills",
+          "Properties": {
+            "Url": "http://gbslearn-stg.atlanta.ibm.com/futureskills/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 10 ? * 1,2,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9632711-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Hacker News",
+          "Properties": {
+            "Url": "https://news.ycombinator.com/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 10 10 ? * 1,2,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9642436-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Dev.to",
+          "Properties": {
+            "Url": "https://dev.to/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 5 10 ? * 1,2,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9651869-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Hacker Noon",
+          "Properties": {
+            "Url": "https://hackernoon.com/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 7 14 ? * 4"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9662078-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Azure Labs",
+          "Properties": {
+            "Url": "https://www.azuredevopslabs.com/"
+          }
+        }
+      ],
+      "Name": "Education",
+      "Properties": {}
+    },
+    {
+      "ChildItems": [
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 30 8 ? * 2,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9672063-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "PMP",
+          "Properties": {
+            "Url": "https://w3-01.ibm.com/services/tools/marketplace/displayMyHoursPlan.wss"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 9 ? * 5,2"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9681004-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Checkpoint",
+          "Properties": {
+            "Url": "https://performancemanager4.successfactors.com/sf/start?company=C0000160864P"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 16 ? * 5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9690686-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "IBM Thanks",
+          "Properties": {
+            "Url": "https://ibmrr.performnet.com/ibmrr/loginSuccess.do"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 14 ? * 5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9700743-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Career Model",
+          "Properties": {
+            "Url": "https://apps.na.collabserv.com/communities/service/html/communitystart?communityUuid=b0aee14f-98b9-41cc-81bc-eba42f0df5ae"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 14 ? * 5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9710349-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Expertise@IBM",
+          "Properties": {
+            "Url": "https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/W008d75850ac5_456e_92b0_0d25b6b5b4f2"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 8 ? * 4,2"
+          },
+          "LastExecution": "2020-09-15T10:14:44.971962-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "CV Wizard",
+          "Properties": {
+            "Url": "https://w3-01.ibm.com/services/americas/cvwizard/cv-wizard.nsf/Pg-WebHome"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 2 8 ? * 2,4"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9730668-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "IBM My Skills",
+          "Properties": {
+            "Url": "https://2x-dc2.kenexa.com/wps/myportal/$tenant/IBM/SWF/expertisemanager/myskills/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifSy9zdwt_Q38LXx9jA0C_cM8LI19g40cQ030wwkpiAJKG-AAjgbo-t2DDU1B-k0MzPzdDA3cDcD6CdqPxwKC-qPwKTENMUdXgMWJhDyJ1wpHV1P9gtzQ0AiDTM90R0VFAPcLz7Y!/dz/d5/L2dJQSEvUUt3QS80TmxFL1o2X0w5SzZHOU8wTzhNTDMwUU9WSDkzTVMyQUI0/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 8 ? * MON-FRI"
+          },
+          "LastExecution": "2020-09-15T10:14:44.974529-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Find an open seat",
+          "Properties": {
+            "Url": "https://w3.ibm.com/services/tools/marketplace/findanOpenseat.wss"
+          }
+        }
+      ],
+      "Name": "Career",
+      "Properties": {}
+    },
+    {
+      "ChildItems": [
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 15 ? * 5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9753462-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Microsoft Events",
+          "Properties": {
+            "Url": "https://events.microsoft.com/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 57 14 ? * 5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9763935-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "MCP Site",
+          "Properties": {
+            "Url": "https://www.microsoft.com/en-us/learning/dashboard.aspx"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 30 9 ? * 2,4"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9774821-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "IBM Microsoft Portal",
+          "Properties": {
+            "Url": "https://ibm.ontidwit.com/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 9 ? * 5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9786616-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Microsoft Events 2",
+          "Properties": {
+            "Url": "https://www.microsoftevents.com/profile/web/index.cfm?PKwebID=0x713223abcd"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 14 ? * 2,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9796838-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Microsoft University",
+          "Properties": {
+            "Url": "https://partneruniversity.microsoft.com"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 10 ? * 1,2,3,5,4"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9804964-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "IBM/Microsoft Cert Tools",
+          "Properties": {
+            "Url": "https://ibm.ent.box.com/folder/103310858145"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 9 ? * 1,3,2,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9816701-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "MS Dynamics Learning Portal",
+          "Properties": {
+            "Url": "https://mbspartner.microsoft.com/Home"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 1 9 ? * 1,2,3,4,5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9834894-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Microsoft Learning",
+          "Properties": {
+            "Url": "https://docs.microsoft.com/en-us/learn/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 13 ? * 5"
+          },
+          "LastExecution": "2020-09-15T10:14:44.9845365-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Microsoft Partner Center",
+          "Properties": {
+            "Url": "https://partner.microsoft.com/en-us/pc/Users/MyAccount"
+          }
+        }
+      ],
+      "Name": "Microsoft",
+      "Properties": {}
+    },
+    {
+      "ChildItems": [
+        {
+          "ChildItems": [
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 30 8 ? * 1,2,3,4,5"
+              },
+              "LastExecution": "2020-09-15T10:14:44.9854352-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "DCF Box",
+              "Properties": {
+                "Url": "https://ibm.ent.box.com/folder/90803973050"
+              }
+            },
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 30 8 ? * 1,2,3,5,4"
+              },
+              "LastExecution": "2020-09-15T10:14:44.9861888-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "DCF DevOps",
+              "Properties": {
+                "Url": "https://dev.azure.com/dcf-EIS-1/EIS%20CPI%20Mobile%20Phase%20I"
+              }
+            },
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 30 8 ? * 1,2,3,4,5"
+              },
+              "LastExecution": "2020-09-15T10:14:44.9869342-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "DCF Apps",
+              "Properties": {
+                "Url": "https://account.activedirectory.windowsazure.com/r#/applications"
+              }
+            },
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 30 8 ? * 1,2,3,4,5"
+              },
+              "LastExecution": "2020-09-15T10:14:44.987619-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Outlook Mail",
+              "Properties": {
+                "Url": "https://outlook.live.com/mail/0/inbox"
+              }
+            }
+          ],
+          "Name": "DCF",
+          "Properties": {}
+        },
+        {
+          "ChildItems": [
+            {
+              "TemplateID": 5,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 30 9 ? * MON-FRI"
+              },
+              "LastExecution": "2020-09-15T10:16:33.6135651-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Napkin Sketch",
+              "Properties": {
+                "Path": "C:\\Users\\ChristopherArterburn\\Documents\\Projects\\WM Events Bus Framework",
+                "FileName": "Back of Napkin Sketch of architecture.vsd"
+              }
+            },
+            {
+              "TemplateID": 5,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 30 9 ? * MON-FRI"
+              },
+              "LastExecution": "2020-09-15T10:16:31.5627247-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Data Model",
+              "Properties": {
+                "Path": "C:\\Users\\ChristopherArterburn\\Documents\\Projects\\WM Events Bus Framework",
+                "FileName": "Management Portal Data Model.vsdx"
+              }
+            },
+            {
+              "TemplateID": 6,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 30 9 ? * MON-FRI"
+              },
+              "LastExecution": "2020-09-15T10:17:14.0590773-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Design Doc",
+              "Properties": {
+                "Path": "C:\\Users\\ChristopherArterburn\\Documents\\Projects\\WM Events Bus Framework",
+                "FileName": "WM Event Bus Framework Design.docx"
+              }
+            }
+          ],
+          "Name": "WM Pub Sub",
+          "Properties": {}
+        }
+      ],
+      "Name": "Projects",
+      "Properties": {}
+    }
+  ]
+}
