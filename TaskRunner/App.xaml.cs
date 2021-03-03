@@ -19,7 +19,7 @@ namespace TaskRunner
         string _configPath;
         TaskRunnerController _controller;
 
-        System.Timers.Timer _saveTimer = new System.Timers.Timer(600000);
+        readonly System.Timers.Timer _saveTimer = new System.Timers.Timer(600000);
 
 
         private void Application_Startup(object sender, StartupEventArgs e)
@@ -36,7 +36,7 @@ namespace TaskRunner
                 _configPath = Path.Combine(Environment.CurrentDirectory, "TaskRunner.json");
             }
 
-            if (File.Exists(_configPath) == false)
+            if (File.Exists(_configPath))
             {
                 MessageBox.Show($"{_configPath} is not a valid file name. Please correct and try again", "Config File Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -88,16 +88,12 @@ namespace TaskRunner
 
         private void SaveTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
-            //TaskRunnerController.Logger.LogInformation("Checking for changes to save");
 
-            if (TaskRunnerController.Current.IsChanged == true)
+            if (TaskRunnerController.Current.IsChanged)
             {
                 _controller.SaveConfig(_configPath);
             }
-            else
-            {
-                //TaskRunnerController.Logger.LogInformation("No changes detected");
-            }
+
         }
     }
 }

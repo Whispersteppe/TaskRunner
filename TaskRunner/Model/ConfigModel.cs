@@ -9,8 +9,8 @@ namespace TaskRunner.Model
 {
     public class ConfigModel : ModelBase
     {
-        TaskRunnerConfig _config;
-        TaskRunnerController _controller;
+        readonly TaskRunnerConfig _config;
+        readonly TaskRunnerController _controller;
 
         public ConfigModel(TaskRunnerController controller)
         {
@@ -125,9 +125,6 @@ namespace TaskRunner.Model
 
 
 
-        public override void RefreshToConfig()
-        {
-            base.RefreshToConfig();
-        }
+
     }
 }
