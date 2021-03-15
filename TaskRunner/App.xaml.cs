@@ -36,7 +36,7 @@ namespace TaskRunner
                 _configPath = Path.Combine(Environment.CurrentDirectory, "TaskRunner.json");
             }
 
-            if (File.Exists(_configPath))
+            if (!File.Exists(_configPath))
             {
                 MessageBox.Show($"{_configPath} is not a valid file name. Please correct and try again", "Config File Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;

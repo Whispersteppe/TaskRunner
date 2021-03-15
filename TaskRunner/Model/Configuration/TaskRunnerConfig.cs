@@ -56,9 +56,21 @@ namespace TaskRunner.Model.Configuration
         public static void SaveConfig(string filePath, TaskRunnerConfig config)
         {
             config.LastSave = DateTime.Now;
-//            TaskRunnerController.Logger.LogInformation($"Saving Configuration at {config.LastSave}");
 
             string configData = JsonConvert.SerializeObject(config, Formatting.Indented, new StringEnumConverter());
+            if (File.Exists(filePath))
+            {
+                string path = Path.GetDirectoryName(filePath);
+                string fileName = Path.GetFileNameWithoutExtension(filePath);
+                string extension = Path.GetExtension(filePath);
+
+                string backupFileName = Path.Combine(path, $"{fileName} - backup {DateTime.Now.ToString("yyyyMMddHHmmss")}{extension}");
+
+                File.Copy(filePath, backupFileName);
+
+                
+            }
+
             File.WriteAllText(filePath, configData);
         }
 
