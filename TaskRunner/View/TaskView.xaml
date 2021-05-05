@@ -37,6 +37,7 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
         <Label Content="Task" Grid.Row="0" Grid.Column="0" />
@@ -60,6 +61,7 @@
 
         <Button Content="Edit" HorizontalContentAlignment="Center" VerticalAlignment="Center" Width="80" Grid.Row="8" Grid.ColumnSpan="2" Grid.Column="0" Click="Edit_Task_Click" />
         <Button Content="Launch Now" HorizontalContentAlignment="Center" VerticalAlignment="Center" Width="80" Grid.Row="9" Grid.ColumnSpan="2" Grid.Column="0" Click="Launch_Task_Now_Click" />
+        <Button Content="Delete" HorizontalContentAlignment="Center" VerticalAlignment="Center" Width="80" Grid.Row="10" Grid.ColumnSpan="2" Grid.Column="0" Click="DeleteTaskClick" />
 
 
     </Grid>

@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TaskRunner.Model;
 using TaskRunner.Model.RunnerTask;
 
 namespace TaskRunner.View
@@ -36,6 +37,28 @@ namespace TaskRunner.View
                 };
                 dlg.ShowDialog();
             }
+        }
+
+        private void DeleteTaskClick(object sender, RoutedEventArgs e)
+        {
+            var task = DataContext as TaskTreeItemBase;
+            if (task != null)
+            {
+
+                if (MessageBox.Show($"Are you sure you want to delete {task.Name}", "Delete", MessageBoxButton.OKCancel) == MessageBoxResult.Cancel) return;
+
+                //  we can only delete folders if they are empty
+                if (task is TaskFolder folder)
+                {
+                    if (folder.ChildItems.Count > 0) return;
+                }
+
+
+                TaskRunnerController.Current.TaskTreeItems.DeleteItem((TaskFolder)task.Parent, task);
+
+            }
+
+
         }
 
         public T FindParentItem<T>(DependencyObject item) where T : DependencyObject

@@ -255,8 +255,7 @@ namespace TaskRunner.Model.RunnerTask
         /// <param name="e"></param>
         private void Delete_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-
-            if (MessageBox.Show("Are you sure you want to delete ", "Delete", MessageBoxButton.OKCancel) == MessageBoxResult.Cancel) return;
+            if (MessageBox.Show($"Are you sure you want to delete {this.Name}", "Delete", MessageBoxButton.OKCancel) == MessageBoxResult.Cancel) return;
 
             //  we can only delete folders if they are empty
             if (this is TaskFolder)

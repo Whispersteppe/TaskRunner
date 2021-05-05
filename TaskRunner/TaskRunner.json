@@ -1,10 +1,10 @@
 {
-  "LastSave": "2020-10-02T09:40:38.3498392-05:00",
+  "LastSave": "2021-05-05T16:40:43.1700568-05:00",
   "Defaults": {
     "NewTaskCronExpression": "0 0 8 ? * MON-FRI",
     "MainWindow": {
-      "Left": 1986.0,
-      "Top": 371.0,
+      "Left": 2139.0,
+      "Top": 318.0,
       "Width": 835.0,
       "Height": 436.0
     }
@@ -110,6 +110,21 @@
           "PropertyType": "String"
         }
       ]
+    },
+    {
+      "TemplateType": "FileExecute",
+      "ExecutablePath": "C:\\Program Files (x86)\\Microsoft\\Edge Dev\\Application\\msedge.exe",
+      "CommandLine": "{0}",
+      "Name": "Microsoft Edge",
+      "ID": 7,
+      "Properties": [
+        {
+          "Name": "Url",
+          "DefaultValue": "https://www.google.com",
+          "Order": 1,
+          "PropertyType": "String"
+        }
+      ]
     }
   ],
   "Tasks": [
@@ -122,25 +137,11 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 8,12,18 * * ?"
           },
-          "LastExecution": "2020-10-02T08:00:00.1259709-05:00",
+          "LastExecution": "2021-05-05T12:00:00.0185242-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "LoseIt",
           "Properties": {
             "Url": "https://loseit.com/"
-          }
-        },
-        {
-          "TemplateID": 1,
-          "IsActive": true,
-          "Trigger": {
-            "TriggerType": "CronTrigger",
-            "CronExpression": "0 0 7 * * ?"
-          },
-          "LastExecution": "2020-10-02T07:00:00.1893681-05:00",
-          "AllowLaunchOnStartup": true,
-          "Name": "Toodledo",
-          "Properties": {
-            "Url": "https://tasks.toodledo.com/main/-9"
           }
         },
         {
@@ -150,7 +151,21 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 7 * * ?"
           },
-          "LastExecution": "2020-10-01T13:32:14.0236005-05:00",
+          "LastExecution": "2021-04-28T21:37:27.3944142-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Toodledo",
+          "Properties": {
+            "Url": "https://www.toodledo.com"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": false,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 7 * * ?"
+          },
+          "LastExecution": "2021-04-28T21:37:27.4009788-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Pocket",
           "Properties": {
@@ -164,7 +179,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 7 * * ?"
           },
-          "LastExecution": "2020-10-01T13:32:14.0294775-05:00",
+          "LastExecution": "2021-04-28T21:37:27.4117627-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Calendar",
           "Properties": {
@@ -178,7 +193,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 17 ? * 5"
           },
-          "LastExecution": "2020-10-01T13:32:14.0635159-05:00",
+          "LastExecution": "2021-04-30T17:00:00.0168308-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "iCloud",
           "Properties": {
@@ -187,17 +202,37 @@
         },
         {
           "TemplateID": 2,
-          "IsActive": true,
+          "IsActive": false,
           "Trigger": {
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 8 * * ?"
           },
-          "LastExecution": "2020-10-02T08:00:00.1740348-05:00",
+          "LastExecution": "2021-04-28T21:37:27.4421212-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "TaskRunner Notes",
           "Properties": {
             "FilePath": "D:\\Projects\\TaskRunner\\readme.md"
           }
+        },
+        {
+          "ChildItems": [
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 0 11 * * ?"
+              },
+              "LastExecution": "2021-05-05T11:00:00.0113128-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Simple Pay Health",
+              "Properties": {
+                "Url": "https://simplepayhealth.com/"
+              }
+            }
+          ],
+          "Name": "Health",
+          "Properties": {}
         }
       ],
       "Name": "Personal",
@@ -212,7 +247,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 9 * * ?"
           },
-          "LastExecution": "2020-10-02T09:00:02.703569-05:00",
+          "LastExecution": "2021-05-05T09:00:01.3032141-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Emojic 8 ball",
           "Properties": {
@@ -226,7 +261,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 30 8 * * ?"
           },
-          "LastExecution": "2020-10-02T08:30:00.1536694-05:00",
+          "LastExecution": "2021-05-05T08:30:00.0173783-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Lifepoints Panel",
           "Properties": {
@@ -240,7 +275,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 15 ? * 5"
           },
-          "LastExecution": "2020-10-01T13:32:14.0982023-05:00",
+          "LastExecution": "2021-04-30T15:00:00.0281081-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Have I Been Pwned",
           "Properties": {
@@ -254,7 +289,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 5 8 ? * TUE,THU,SAT"
           },
-          "LastExecution": "2020-10-01T13:32:14.1033936-05:00",
+          "LastExecution": "2021-05-04T08:05:00.0233005-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "17Track",
           "Properties": {
@@ -268,7 +303,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 13 ? * MON-FRI"
           },
-          "LastExecution": "2020-10-01T13:32:14.1049626-05:00",
+          "LastExecution": "2021-05-05T13:00:00.0107321-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "TimeFlip",
           "Properties": {
@@ -282,7 +317,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 8 * * ?"
           },
-          "LastExecution": "2020-10-02T08:00:00.1549954-05:00",
+          "LastExecution": "2021-05-05T08:00:00.0697218-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "The Far Side",
           "Properties": {
@@ -296,7 +331,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 2 10 ? * MON,WED,FRI"
           },
-          "LastExecution": "2020-10-01T13:32:14.1108036-05:00",
+          "LastExecution": "2021-05-05T10:02:00.0085247-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "2020 resolutions",
           "Properties": {
@@ -310,7 +345,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "5 0 8 * * ?"
           },
-          "LastExecution": "2020-10-02T08:00:05.2675547-05:00",
+          "LastExecution": "2021-05-05T08:00:05.0265712-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Fucking Home Page",
           "Properties": {
@@ -324,25 +359,11 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 12 ? * TUE,FRI"
           },
-          "LastExecution": "2020-10-01T13:32:14.1187942-05:00",
+          "LastExecution": "2021-05-04T12:00:00.0442416-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Google Drive",
           "Properties": {
             "Url": "https://drive.google.com/drive/my-drive"
-          }
-        },
-        {
-          "TemplateID": 1,
-          "IsActive": true,
-          "Trigger": {
-            "TriggerType": "CronTrigger",
-            "CronExpression": "0 20 8 ? * MON-FRI"
-          },
-          "LastExecution": "2020-10-02T08:20:00.066906-05:00",
-          "AllowLaunchOnStartup": true,
-          "Name": "Task Runner",
-          "Properties": {
-            "Url": "https://roadkillhippo.visualstudio.com/Task%20Runner"
           }
         },
         {
@@ -354,7 +375,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 7 * * ?"
               },
-              "LastExecution": "2020-10-01T13:32:14.1221422-05:00",
+              "LastExecution": "2021-05-03T08:29:52.8882547-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Population",
               "Properties": {
@@ -368,7 +389,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 7 * * ?"
               },
-              "LastExecution": "2020-10-02T07:00:00.1624161-05:00",
+              "LastExecution": "2021-05-05T07:00:00.0250351-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Industry",
               "Properties": {
@@ -382,7 +403,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 7 * * ?"
               },
-              "LastExecution": "2020-10-01T13:32:14.1421038-05:00",
+              "LastExecution": "2021-04-28T21:37:27.4611237-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Environment",
               "Properties": {
@@ -396,7 +417,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 7 * * ?"
               },
-              "LastExecution": "2020-10-01T13:32:14.1621233-05:00",
+              "LastExecution": "2021-04-28T21:37:27.4652757-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Security",
               "Properties": {
@@ -410,11 +431,25 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 7 * * ?"
               },
-              "LastExecution": "2020-10-01T13:32:14.1808819-05:00",
+              "LastExecution": "2021-04-28T21:37:27.4764793-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Business",
               "Properties": {
                 "Url": "http://dweezelville.myminicity.com/com"
+              }
+            },
+            {
+              "TemplateID": 1,
+              "IsActive": false,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 0 7 * * ?"
+              },
+              "LastExecution": "2021-04-28T21:37:27.4780223-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Transportation",
+              "Properties": {
+                "Url": "http://dweezelville.myminicity.com/tra"
               }
             }
           ],
@@ -430,7 +465,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 59 23 * * ?"
               },
-              "LastExecution": "2020-10-01T23:59:00.0844133-05:00",
+              "LastExecution": "2021-05-04T23:59:00.0265773-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Bikini Women Daily",
               "Properties": {
@@ -444,7 +479,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 10 ? * MON-FRI"
               },
-              "LastExecution": "2020-10-01T13:32:14.2020374-05:00",
+              "LastExecution": "2021-05-05T10:00:00.0181224-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Google Photos",
               "Properties": {
@@ -458,11 +493,25 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 10 ? * MON-FRI"
               },
-              "LastExecution": "2020-10-01T13:32:14.2040575-05:00",
+              "LastExecution": "2021-05-05T10:00:00.0363732-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Amazon Photos",
               "Properties": {
                 "Url": "https://www.amazon.com/photos"
+              }
+            },
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 59 23 * * ?"
+              },
+              "LastExecution": "2021-05-04T23:59:00.033961-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "All Day Bikinis",
+              "Properties": {
+                "Url": "https://all-day-bikinis.tumblr.com/"
               }
             }
           ],
@@ -478,7 +527,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 9 ? * 5"
               },
-              "LastExecution": "2020-10-02T09:00:01.5075511-05:00",
+              "LastExecution": "2021-04-30T09:00:01.1594016-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Geni.com",
               "Properties": {
@@ -492,7 +541,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 9 ? * 5"
               },
-              "LastExecution": "2020-10-02T09:00:01.5123283-05:00",
+              "LastExecution": "2021-04-30T09:00:01.1696982-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Ancestry.com",
               "Properties": {
@@ -506,7 +555,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 9 ? * 5"
               },
-              "LastExecution": "2020-10-02T09:00:01.9620935-05:00",
+              "LastExecution": "2021-04-30T09:00:01.1882504-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "FamilySearch",
               "Properties": {
@@ -526,7 +575,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 55 8 ? * 5"
               },
-              "LastExecution": "2020-10-02T08:55:00.0918965-05:00",
+              "LastExecution": "2021-04-30T08:55:00.0081747-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Public Domain Music",
               "Properties": {
@@ -544,85 +593,9 @@
               "IsActive": true,
               "Trigger": {
                 "TriggerType": "CronTrigger",
-                "CronExpression": "10 0 8 ? * MON,WED,FRI"
-              },
-              "LastExecution": "2020-10-02T08:00:10.2332277-05:00",
-              "AllowLaunchOnStartup": true,
-              "Name": "Trump Countdown",
-              "Properties": {
-                "Url": "https://www.tickcounter.com/countdown/1611151200000/america-new_york/yodhms/FFFFFF3B5998000000FF0000/Time_Until_Trump_Leaves_Office"
-              }
-            },
-            {
-              "TemplateID": 1,
-              "IsActive": true,
-              "Trigger": {
-                "TriggerType": "CronTrigger",
-                "CronExpression": "0 0 15 ? * MON,WED,FRI"
-              },
-              "LastExecution": "2020-10-01T13:32:14.2208481-05:00",
-              "AllowLaunchOnStartup": true,
-              "Name": "Predict It",
-              "Properties": {
-                "Url": "https://www.predictit.org/"
-              }
-            },
-            {
-              "TemplateID": 1,
-              "IsActive": true,
-              "Trigger": {
-                "TriggerType": "CronTrigger",
-                "CronExpression": "0 1 8 * * ?"
-              },
-              "LastExecution": "2020-10-02T08:01:00.5646318-05:00",
-              "AllowLaunchOnStartup": true,
-              "Name": "Election Day",
-              "Properties": {
-                "Url": "https://www.tickcounter.com/countdown/2122901/election-day"
-              }
-            },
-            {
-              "TemplateID": 1,
-              "IsActive": true,
-              "Trigger": {
-                "TriggerType": "CronTrigger",
-                "CronExpression": "0 57 8 ? * MON,WED,FRI"
-              },
-              "LastExecution": "2020-10-02T08:57:00.1012146-05:00",
-              "AllowLaunchOnStartup": true,
-              "Name": "Forecast",
-              "Properties": {
-                "Url": "https://www.forecastapp.net/"
-              }
-            },
-            {
-              "TemplateID": 1,
-              "IsActive": true,
-              "Trigger": {
-                "TriggerType": "CronTrigger",
-                "CronExpression": "0 45 7 * * ?"
-              },
-              "LastExecution": "2020-10-02T07:45:00.0849171-05:00",
-              "AllowLaunchOnStartup": true,
-              "Name": "Early Voting Starts",
-              "Properties": {
-                "Url": "https://www.tickcounter.com/countdown/2193818/early-voting-starts"
-              }
-            }
-          ],
-          "Name": "Politics",
-          "Properties": {}
-        },
-        {
-          "ChildItems": [
-            {
-              "TemplateID": 1,
-              "IsActive": true,
-              "Trigger": {
-                "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 7 * * ?"
               },
-              "LastExecution": "2020-10-02T07:00:00.7783026-05:00",
+              "LastExecution": "2021-05-05T07:00:00.0288217-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Godville",
               "Properties": {
@@ -636,7 +609,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 15 ? * TUE,THU"
               },
-              "LastExecution": "2020-10-01T15:00:00.1260226-05:00",
+              "LastExecution": "2021-05-04T15:00:00.0165407-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "One Page Dungeon",
               "Properties": {
@@ -654,7 +627,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "15 0 8 1-24 12 ?"
           },
-          "LastExecution": "2020-10-01T13:32:14.2316999-05:00",
+          "LastExecution": "2021-04-28T21:37:27.4971399-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Christmas Countdown",
           "Properties": {
@@ -663,16 +636,30 @@
         },
         {
           "TemplateID": 1,
-          "IsActive": false,
+          "IsActive": true,
           "Trigger": {
             "TriggerType": "CronTrigger",
-            "CronExpression": "0 * * * * ?"
+            "CronExpression": "0 17 8 * * ?"
           },
-          "LastExecution": "2020-10-01T13:32:14.2363385-05:00",
+          "LastExecution": "2021-05-05T08:17:00.0064003-05:00",
           "AllowLaunchOnStartup": true,
-          "Name": "Emojic 8 ball",
+          "Name": "xkcd",
           "Properties": {
-            "Url": "https://xkcd.com/1525/"
+            "Url": "https://xkcd.com/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 15 ? * FRI"
+          },
+          "LastExecution": "2021-04-30T15:00:00.0423091-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Bayeux Tapestry Builder",
+          "Properties": {
+            "Url": "https://htck.github.io/bayeux/#!/"
           }
         }
       ],
@@ -688,7 +675,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 16 ? * TUE,FRI"
           },
-          "LastExecution": "2020-10-01T13:32:14.2422523-05:00",
+          "LastExecution": "2021-05-04T16:00:00.0118891-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Acorns",
           "Properties": {
@@ -702,7 +689,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 13 ? * SUN,FRI"
           },
-          "LastExecution": "2020-10-01T13:32:14.263958-05:00",
+          "LastExecution": "2021-05-02T13:00:00.0214703-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Mint.com",
           "Properties": {
@@ -716,7 +703,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 15 ? * 5"
           },
-          "LastExecution": "2020-10-01T13:32:14.2656331-05:00",
+          "LastExecution": "2021-04-30T15:00:00.0493684-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Collin Taxes",
           "Properties": {
@@ -730,7 +717,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 18 9 ? * TUE,FRI"
           },
-          "LastExecution": "2020-10-02T09:18:00.0804221-05:00",
+          "LastExecution": "2021-05-04T09:18:00.0100205-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Texas Lottery",
           "Properties": {
@@ -744,13 +731,13 @@
               "IsActive": true,
               "Trigger": {
                 "TriggerType": "CronTrigger",
-                "CronExpression": "0 0 9 * * ?"
+                "CronExpression": "0 0 13 ? * FRI"
               },
-              "LastExecution": "2020-10-02T09:00:02.150928-05:00",
+              "LastExecution": "2021-04-30T13:00:00.036706-05:00",
               "AllowLaunchOnStartup": true,
-              "Name": "Ultra Contest",
+              "Name": "AT&T",
               "Properties": {
-                "Url": "https://ultracontest.com/Category.aspx?daily=1"
+                "Url": "http://att.com/mythanks"
               }
             },
             {
@@ -758,13 +745,13 @@
               "IsActive": true,
               "Trigger": {
                 "TriggerType": "CronTrigger",
-                "CronExpression": "0 0 9 * * ?"
+                "CronExpression": "27 0 9 * * ?"
               },
-              "LastExecution": "2020-10-02T09:00:02.1752279-05:00",
+              "LastExecution": "2021-05-05T09:00:27.0226379-05:00",
               "AllowLaunchOnStartup": true,
-              "Name": "Valpak",
+              "Name": "Masterlock",
               "Properties": {
-                "Url": "https://valpak1.secondstreetapp.com/The-Valpak-Grocery-Sweepstakes/"
+                "Url": "https://masterlocksweeps.com/home/us"
               }
             },
             {
@@ -772,13 +759,13 @@
               "IsActive": true,
               "Trigger": {
                 "TriggerType": "CronTrigger",
-                "CronExpression": "5 0 9 * * ?"
+                "CronExpression": "32 0 9 * * ?"
               },
-              "LastExecution": "2020-10-02T09:00:05.2540232-05:00",
+              "LastExecution": "2021-05-05T09:00:32.015171-05:00",
               "AllowLaunchOnStartup": true,
-              "Name": "iHeart BTS",
+              "Name": "Fingerhut",
               "Properties": {
-                "Url": "https://mostrequestedlive.iheart.com/contests/romeos-bts-virtual-concert-sweepstakes-875530/"
+                "Url": "https://www.fingerhutsweepszone.com/"
               }
             },
             {
@@ -786,13 +773,13 @@
               "IsActive": true,
               "Trigger": {
                 "TriggerType": "CronTrigger",
-                "CronExpression": "10 0 9 * * ?"
+                "CronExpression": "34 0 9 * * ?"
               },
-              "LastExecution": "2020-10-02T09:00:10.2739863-05:00",
+              "LastExecution": "2021-05-05T09:00:34.0113737-05:00",
               "AllowLaunchOnStartup": true,
-              "Name": "synchony",
+              "Name": "Legoland",
               "Properties": {
-                "Url": "https://www.mysynchrony.com/dreambiggame.html"
+                "Url": "https://minimuffins.com/legolandgiveaway/"
               }
             },
             {
@@ -800,13 +787,13 @@
               "IsActive": true,
               "Trigger": {
                 "TriggerType": "CronTrigger",
-                "CronExpression": "15 0 9 * * ?"
+                "CronExpression": "48 0 9 * * ?"
               },
-              "LastExecution": "2020-10-02T09:00:15.1559022-05:00",
+              "LastExecution": "2021-05-05T09:00:48.0629183-05:00",
               "AllowLaunchOnStartup": true,
-              "Name": "intel xsplit",
+              "Name": "KOA",
               "Properties": {
-                "Url": "https://create.intel.com/xsplit/"
+                "Url": "https://www.makeyourwayout.com/"
               }
             },
             {
@@ -814,13 +801,13 @@
               "IsActive": true,
               "Trigger": {
                 "TriggerType": "CronTrigger",
-                "CronExpression": "20 0 9 * * ?"
+                "CronExpression": "54 0 9 * * ?"
               },
-              "LastExecution": "2020-10-02T09:00:20.2424474-05:00",
+              "LastExecution": "2021-05-05T09:00:54.0069995-05:00",
               "AllowLaunchOnStartup": true,
-              "Name": "Starland",
+              "Name": "Visit Orlando",
               "Properties": {
-                "Url": "https://www.starbucksrewardsstarland.com/#/oamoe"
+                "Url": "https://www.visitorlando.com/win-the-orlando-family-vacation-of-your-dreams/"
               }
             },
             {
@@ -828,13 +815,13 @@
               "IsActive": true,
               "Trigger": {
                 "TriggerType": "CronTrigger",
-                "CronExpression": "30 0 9 * * ?"
+                "CronExpression": "46 0 9 * * ?"
               },
-              "LastExecution": "2020-10-02T09:00:30.1914545-05:00",
+              "LastExecution": "2021-05-05T09:00:46.0246659-05:00",
               "AllowLaunchOnStartup": true,
-              "Name": "iHeart Stella",
+              "Name": "Bob Vila Oasis",
               "Properties": {
-                "Url": "https://news.iheart.com/contests/stella-rosa-872004/"
+                "Url": "https://www.bobvila.com/contest/struxure-backyard-oasis"
               }
             },
             {
@@ -842,45 +829,149 @@
               "IsActive": true,
               "Trigger": {
                 "TriggerType": "CronTrigger",
-                "CronExpression": "35 0 9 * * ?"
+                "CronExpression": "47 0 9 * * ?"
               },
-              "LastExecution": "2020-10-02T09:00:35.2114099-05:00",
+              "LastExecution": "2021-05-05T09:00:47.0279078-05:00",
               "AllowLaunchOnStartup": true,
-              "Name": "Jarritos",
+              "Name": "Lands End",
               "Properties": {
-                "Url": "https://celebrateyourheritage.com/"
-              }
-            },
-            {
-              "TemplateID": 1,
-              "IsActive": true,
-              "Trigger": {
-                "TriggerType": "CronTrigger",
-                "CronExpression": "40 0 9 * * ?"
-              },
-              "LastExecution": "2020-10-02T09:00:40.3545747-05:00",
-              "AllowLaunchOnStartup": true,
-              "Name": "Natures Eats",
-              "Properties": {
-                "Url": "https://www.farmstarliving.com/sweeps/nutsforlife/"
-              }
-            },
-            {
-              "TemplateID": 1,
-              "IsActive": true,
-              "Trigger": {
-                "TriggerType": "CronTrigger",
-                "CronExpression": "45 0 9 * * ?"
-              },
-              "LastExecution": "2020-10-02T09:00:45.2659702-05:00",
-              "AllowLaunchOnStartup": true,
-              "Name": "Intel Adobe",
-              "Properties": {
-                "Url": "https://create.intel.com/adobe/"
+                "Url": "https://www.landsend.com/beyond-the-beach/"
               }
             }
           ],
           "Name": "Contests",
+          "Properties": {}
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 9 ? * MON-FRI"
+          },
+          "LastExecution": "2021-05-05T09:00:01.2824459-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Sheets",
+          "Properties": {
+            "Url": "https://docs.google.com/spreadsheets/u/0/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 14 20 * ?"
+          },
+          "LastExecution": "2021-04-28T21:37:27.5361684-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Synchrony Living Spaces",
+          "Properties": {
+            "Url": "https://www.mysynchrony.com/"
+          }
+        },
+        {
+          "ChildItems": [
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 0 14 ? * FRI"
+              },
+              "LastExecution": "2021-04-30T14:00:00.1311712-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Prudential",
+              "Properties": {
+                "Url": "https://www.prudential.com"
+              }
+            },
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 0 14 ? * FRI"
+              },
+              "LastExecution": "2021-04-30T14:00:00.1352249-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Wells Fargo",
+              "Properties": {
+                "Url": "https://www.wellsfargo.com/"
+              }
+            },
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 0 14 ? * FRI"
+              },
+              "LastExecution": "2021-04-30T14:00:00.1789924-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Chase",
+              "Properties": {
+                "Url": "https://www.chase.com/"
+              }
+            },
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 0 14 ? * FRI"
+              },
+              "LastExecution": "2021-04-30T14:00:00.1889949-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Computershare (ibm)",
+              "Properties": {
+                "Url": "https://www.computershare.com/us"
+              }
+            },
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 0 14 ? * FRI"
+              },
+              "LastExecution": "2021-04-30T14:00:00.2051571-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Transamerica",
+              "Properties": {
+                "Url": "https://www.transamerica.com/portal/home/"
+              }
+            },
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 0 14 ? * FRI"
+              },
+              "LastExecution": "2021-04-30T14:00:00.2779302-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Fidelity (ibm, eds)",
+              "Properties": {
+                "Url": "https://www.fidelity.com/"
+              }
+            },
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 0 14 ? * FRI"
+              },
+              "LastExecution": "2021-04-30T14:00:00.287532-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "US SSA",
+              "Properties": {
+                "Url": "https://www.ssa.gov/"
+              }
+            }
+          ],
+          "Name": "Investments",
           "Properties": {}
         }
       ],
@@ -896,7 +987,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 13 ? * 5"
           },
-          "LastExecution": "2020-10-01T13:32:14.2882067-05:00",
+          "LastExecution": "2021-04-30T13:00:00.0464283-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Magellan GPS",
           "Properties": {
@@ -910,7 +1001,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 16 * * ?"
           },
-          "LastExecution": "2020-10-01T16:00:00.1350508-05:00",
+          "LastExecution": "2021-05-05T16:00:00.0192751-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Wundermap",
           "Properties": {
@@ -924,7 +1015,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 16 ? * SUN,TUE,FRI"
           },
-          "LastExecution": "2020-10-01T13:32:14.2920687-05:00",
+          "LastExecution": "2021-05-04T16:00:00.0199975-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Tripit",
           "Properties": {
@@ -938,7 +1029,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 13 ? * 5"
           },
-          "LastExecution": "2020-10-01T13:32:14.2937794-05:00",
+          "LastExecution": "2021-04-30T13:00:00.0567213-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Carfax",
           "Properties": {
@@ -952,7 +1043,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 27 9 * * ?"
           },
-          "LastExecution": "2020-10-02T09:27:00.2142928-05:00",
+          "LastExecution": "2021-05-05T09:27:00.0140858-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "MapCrunch",
           "Properties": {
@@ -968,7 +1059,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 10 ? * 5"
               },
-              "LastExecution": "2020-10-01T13:32:14.3112112-05:00",
+              "LastExecution": "2021-04-30T10:00:00.0494686-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "DVC",
               "Properties": {
@@ -977,12 +1068,12 @@
             },
             {
               "TemplateID": 1,
-              "IsActive": true,
+              "IsActive": false,
               "Trigger": {
                 "TriggerType": "CronTrigger",
                 "CronExpression": "20 0 8 ? * MON-FRI"
               },
-              "LastExecution": "2020-10-02T08:00:20.1159027-05:00",
+              "LastExecution": "2021-04-28T21:37:27.5560511-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Disney Parks",
               "Properties": {
@@ -991,12 +1082,12 @@
             },
             {
               "TemplateID": 1,
-              "IsActive": true,
+              "IsActive": false,
               "Trigger": {
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 7 * * ?"
               },
-              "LastExecution": "2020-10-02T07:00:00.804538-05:00",
+              "LastExecution": "2021-04-28T21:37:27.5593106-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Disneyworld Countdown",
               "Properties": {
@@ -1005,26 +1096,26 @@
             },
             {
               "TemplateID": 1,
-              "IsActive": true,
+              "IsActive": false,
               "Trigger": {
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 13 ? * TUE,FRI"
               },
-              "LastExecution": "2020-10-01T13:32:14.3269182-05:00",
+              "LastExecution": "2021-04-28T21:37:27.561149-05:00",
               "AllowLaunchOnStartup": true,
-              "Name": "Disney Trip Planner",
+              "Name": "Disney Dining Calculator",
               "Properties": {
                 "Url": "https://www.distripplanner.com/"
               }
             },
             {
               "TemplateID": 1,
-              "IsActive": true,
+              "IsActive": false,
               "Trigger": {
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 14 10 ? * MON,WED,FRI"
               },
-              "LastExecution": "2020-10-01T13:32:14.3303001-05:00",
+              "LastExecution": "2021-04-28T21:37:27.5648283-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "TouringPlans",
               "Properties": {
@@ -1033,12 +1124,12 @@
             },
             {
               "TemplateID": 1,
-              "IsActive": true,
+              "IsActive": false,
               "Trigger": {
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 14 * * ?"
               },
-              "LastExecution": "2020-10-01T14:00:00.2023738-05:00",
+              "LastExecution": "2021-04-28T21:37:27.5678163-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Disney Schedule",
               "Properties": {
@@ -1047,16 +1138,30 @@
             },
             {
               "TemplateID": 1,
-              "IsActive": true,
+              "IsActive": false,
               "Trigger": {
                 "TriggerType": "CronTrigger",
-                "CronExpression": "0 0 14 * * ?"
+                "CronExpression": "0 0 14 ? * TUE"
               },
-              "LastExecution": "2020-10-01T14:00:00.2024773-05:00",
+              "LastExecution": "2021-04-28T21:37:27.5706575-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Universal Schedule",
               "Properties": {
                 "Url": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/park-hours"
+              }
+            },
+            {
+              "TemplateID": 1,
+              "IsActive": false,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 30 9 ? * MON-FRI"
+              },
+              "LastExecution": "2021-04-28T21:37:27.5757202-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Availability Calendar",
+              "Properties": {
+                "Url": "https://disneyworld.disney.go.com/availability-calendar/?segments=tickets,resort,passholder"
               }
             }
           ],
@@ -1076,7 +1181,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 7 * * ?"
           },
-          "LastExecution": "2020-10-02T07:00:00.9187554-05:00",
+          "LastExecution": "2021-05-05T07:00:00.0357803-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Woot Stalker",
           "Properties": {
@@ -1090,7 +1195,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 16 ? * MON,WED,FRI"
           },
-          "LastExecution": "2020-10-01T13:32:14.345695-05:00",
+          "LastExecution": "2021-05-05T16:00:00.0251378-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Geek",
           "Properties": {
@@ -1104,7 +1209,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 9 * * ?"
           },
-          "LastExecution": "2020-10-02T09:00:02.5495513-05:00",
+          "LastExecution": "2021-05-05T09:00:01.2870253-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Flipp Shopping List",
           "Properties": {
@@ -1118,7 +1223,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 15 8 ? * 3"
           },
-          "LastExecution": "2020-10-01T13:32:14.3527189-05:00",
+          "LastExecution": "2021-05-05T08:15:00.0182932-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Coupons.com",
           "Properties": {
@@ -1132,7 +1237,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 30 6 * * ?"
           },
-          "LastExecution": "2020-10-02T06:30:00.0649184-05:00",
+          "LastExecution": "2021-05-05T06:30:00.0141123-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Meh.com",
           "Properties": {
@@ -1146,7 +1251,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 45 8 ? * 5"
           },
-          "LastExecution": "2020-10-02T08:45:00.0873212-05:00",
+          "LastExecution": "2021-04-30T08:45:00.0079319-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Clark Deals",
           "Properties": {
@@ -1160,7 +1265,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 30 16 ? * TUE,FRI"
           },
-          "LastExecution": "2020-10-01T13:32:14.3607584-05:00",
+          "LastExecution": "2021-05-04T16:30:00.0078506-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Ali Express",
           "Properties": {
@@ -1174,7 +1279,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 30 7 * * ?"
           },
-          "LastExecution": "2020-10-02T07:30:00.0756815-05:00",
+          "LastExecution": "2021-05-05T07:30:00.0215645-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "SlickDeals",
           "Properties": {
@@ -1188,7 +1293,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 1 8 * * ?"
           },
-          "LastExecution": "2020-10-02T08:01:00.6119926-05:00",
+          "LastExecution": "2021-05-05T08:01:00.0637198-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "MorningSave Random Stuff",
           "Properties": {
@@ -1200,13 +1305,41 @@
           "IsActive": true,
           "Trigger": {
             "TriggerType": "CronTrigger",
-            "CronExpression": "0 0 10 ? * TUE,THU"
+            "CronExpression": "0 0 10 ? * MON,WED,FRI"
           },
-          "LastExecution": "2020-10-01T13:32:14.3736668-05:00",
+          "LastExecution": "2021-05-05T10:00:00.041431-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Amazon Reviews",
           "Properties": {
             "Url": "https://www.amazon.com/review/review-your-purchases/listing"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 16 ? * MON"
+          },
+          "LastExecution": "2021-05-03T16:00:00.020902-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Culvers",
+          "Properties": {
+            "Url": "https://www.culvers.com/restaurants/mckinney"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 5 9 ? * TUE,FRI"
+          },
+          "LastExecution": "2021-05-04T09:05:00.0124005-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Kickstarter",
+          "Properties": {
+            "Url": "https://www.kickstarter.com/"
           }
         }
       ],
@@ -1220,23 +1353,9 @@
           "IsActive": false,
           "Trigger": {
             "TriggerType": "CronTrigger",
-            "CronExpression": "0 0 7 * * ?"
-          },
-          "LastExecution": "2020-10-01T13:32:14.376586-05:00",
-          "AllowLaunchOnStartup": true,
-          "Name": "Inoreader",
-          "Properties": {
-            "Url": "http://www.inoreader.com/dashboard"
-          }
-        },
-        {
-          "TemplateID": 1,
-          "IsActive": false,
-          "Trigger": {
-            "TriggerType": "CronTrigger",
             "CronExpression": "0 30 7 * * ?"
           },
-          "LastExecution": "2020-10-01T13:32:14.3985954-05:00",
+          "LastExecution": "2021-04-28T21:37:27.6266428-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Twitter",
           "Properties": {
@@ -1245,26 +1364,12 @@
         },
         {
           "TemplateID": 1,
-          "IsActive": false,
-          "Trigger": {
-            "TriggerType": "CronTrigger",
-            "CronExpression": "0 30 7 * * ?"
-          },
-          "LastExecution": "2020-10-01T13:32:14.415907-05:00",
-          "AllowLaunchOnStartup": true,
-          "Name": "Facebook",
-          "Properties": {
-            "Url": "https://www.facebook.com/"
-          }
-        },
-        {
-          "TemplateID": 1,
-          "IsActive": false,
+          "IsActive": true,
           "Trigger": {
             "TriggerType": "CronTrigger",
             "CronExpression": "0 31 7 * * ?"
           },
-          "LastExecution": "2020-10-01T13:32:14.447227-05:00",
+          "LastExecution": "2021-05-05T07:31:00.0106008-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Tweetdeck",
           "Properties": {
@@ -1278,7 +1383,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 50 15 ? * MON-FRI"
           },
-          "LastExecution": "2020-10-01T15:50:00.0646303-05:00",
+          "LastExecution": "2021-05-05T15:50:00.0532858-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Find Friends",
           "Properties": {
@@ -1292,7 +1397,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 15 ? * 1-5"
           },
-          "LastExecution": "2020-10-01T15:00:00.1454837-05:00",
+          "LastExecution": "2021-05-05T15:00:00.0137276-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Developer Blog",
           "Properties": {
@@ -1306,11 +1411,39 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 13 ? * mon,wed,fri"
           },
-          "LastExecution": "2020-10-01T13:32:14.4755895-05:00",
+          "LastExecution": "2021-05-05T13:00:00.0145403-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Cowboy Bob Blog",
           "Properties": {
             "Url": "https://www.blogger.com/u/1/blog/posts/6561006048252261468"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": false,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 8,12,16 * * ?"
+          },
+          "LastExecution": "2021-04-28T21:37:27.6397974-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Facebook",
+          "Properties": {
+            "Url": "https://www.facebook.com/"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 8 ? * MON-FRI"
+          },
+          "LastExecution": "2021-05-05T08:00:00.097071-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Stuff I Learned Today",
+          "Properties": {
+            "Url": "https://www.blogger.com/u/1/blog/posts/4858969854212620037"
           }
         }
       ],
@@ -1326,7 +1459,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 7 * * ?"
           },
-          "LastExecution": "2020-10-02T07:00:01.1756528-05:00",
+          "LastExecution": "2021-05-05T07:00:00.049525-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Acurite",
           "Properties": {
@@ -1338,9 +1471,9 @@
           "IsActive": true,
           "Trigger": {
             "TriggerType": "CronTrigger",
-            "CronExpression": "0 0 20 * * ?"
+            "CronExpression": "0 0 23 * * ?"
           },
-          "LastExecution": "2020-10-01T20:00:00.0752767-05:00",
+          "LastExecution": "2021-05-04T23:00:00.0282883-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Solar City",
           "Properties": {
@@ -1354,7 +1487,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 25 11 ? * 5"
           },
-          "LastExecution": "2020-10-01T13:32:14.5010418-05:00",
+          "LastExecution": "2021-04-30T11:25:00.0084438-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Honeywell",
           "Properties": {
@@ -1368,7 +1501,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 14 ? * 5"
           },
-          "LastExecution": "2020-10-01T13:32:14.502795-05:00",
+          "LastExecution": "2021-04-30T14:00:00.0189537-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Community Crime Map",
           "Properties": {
@@ -1382,7 +1515,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 40 8 ? * 5"
           },
-          "LastExecution": "2020-10-02T08:40:00.0901302-05:00",
+          "LastExecution": "2021-04-30T08:40:00.0701828-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Printer Status",
           "Properties": {
@@ -1396,11 +1529,25 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 16 ? * 3"
           },
-          "LastExecution": "2020-10-01T13:32:14.5383453-05:00",
+          "LastExecution": "2021-05-05T16:00:00.0287123-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Rachio",
           "Properties": {
             "Url": "https://app.rach.io"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 12 1 * ?"
+          },
+          "LastExecution": "2021-05-01T12:00:00.0330051-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Sofa Wrranty",
+          "Properties": {
+            "Url": "https://portal.warrantyservice.com/dashboard"
           }
         }
       ],
@@ -1416,7 +1563,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 14 ? * 5"
           },
-          "LastExecution": "2020-10-01T13:32:14.5400152-05:00",
+          "LastExecution": "2021-04-30T14:00:00.0212017-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "McKinney Library",
           "Properties": {
@@ -1432,7 +1579,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "25 0 8 * * ?"
               },
-              "LastExecution": "2020-10-02T08:00:25.127187-05:00",
+              "LastExecution": "2021-05-05T08:00:25.0086855-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Google News",
               "Properties": {
@@ -1446,7 +1593,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "30 0 8 * * ?"
               },
-              "LastExecution": "2020-10-02T08:00:30.1653693-05:00",
+              "LastExecution": "2021-05-05T08:00:30.0172545-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Microsoft News",
               "Properties": {
@@ -1460,7 +1607,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "35 0 8 * * ?"
               },
-              "LastExecution": "2020-10-02T08:00:35.203206-05:00",
+              "LastExecution": "2021-05-05T08:00:35.0107917-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "ABC News",
               "Properties": {
@@ -1474,7 +1621,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "40 0 8 * * ?"
               },
-              "LastExecution": "2020-10-02T08:00:40.2276197-05:00",
+              "LastExecution": "2021-05-05T08:00:40.0092515-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "CNN",
               "Properties": {
@@ -1488,7 +1635,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "45 0 8 * * ?"
               },
-              "LastExecution": "2020-10-02T08:00:45.2566789-05:00",
+              "LastExecution": "2021-05-05T08:00:45.0517357-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "USA Today",
               "Properties": {
@@ -1502,7 +1649,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "50 0 8 * * ?"
               },
-              "LastExecution": "2020-10-02T08:00:50.1736415-05:00",
+              "LastExecution": "2021-05-05T08:00:50.0323226-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "BBC",
               "Properties": {
@@ -1516,7 +1663,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "55 0 8 * * ?"
               },
-              "LastExecution": "2020-10-02T08:00:55.2611529-05:00",
+              "LastExecution": "2021-05-05T08:00:55.075752-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "NPR",
               "Properties": {
@@ -1530,7 +1677,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 1 8 * * ?"
               },
-              "LastExecution": "2020-10-02T08:01:00.6687127-05:00",
+              "LastExecution": "2021-05-05T08:01:00.0453919-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Dallas Morning News",
               "Properties": {
@@ -1544,7 +1691,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "5 1 8 * * ?"
               },
-              "LastExecution": "2020-10-02T08:01:05.405658-05:00",
+              "LastExecution": "2021-05-05T08:01:05.0136388-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Reuters",
               "Properties": {
@@ -1558,11 +1705,31 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "10 1 8 * * ?"
               },
-              "LastExecution": "2020-10-02T08:01:10.1288073-05:00",
+              "LastExecution": "2021-05-05T08:01:10.0281821-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Associated Press",
               "Properties": {
                 "Url": "https://apnews.com/"
+              }
+            }
+          ],
+          "Name": "News",
+          "Properties": {}
+        },
+        {
+          "ChildItems": [
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 0 15 ? * MON,WED,FRI"
+              },
+              "LastExecution": "2021-05-05T15:00:00.0090931-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Predict It",
+              "Properties": {
+                "Url": "https://www.predictit.org/"
               }
             },
             {
@@ -1570,18 +1737,122 @@
               "IsActive": true,
               "Trigger": {
                 "TriggerType": "CronTrigger",
-                "CronExpression": "15 1 8 * * ?"
+                "CronExpression": "0 57 8 ? * MON,WED,FRI"
               },
-              "LastExecution": "2020-10-02T08:01:15.1764118-05:00",
+              "LastExecution": "2021-05-05T08:57:00.0151425-05:00",
               "AllowLaunchOnStartup": true,
-              "Name": "538 2020 Election forecast",
+              "Name": "Forecast",
               "Properties": {
-                "Url": "https://projects.fivethirtyeight.com/2020-election-forecast/"
+                "Url": "https://www.forecastapp.net/"
+              }
+            },
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 19 8 ? * MON"
+              },
+              "LastExecution": "2021-05-03T08:19:00.0203289-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Is This a Coup",
+              "Properties": {
+                "Url": "https://isthisacoup.com/"
               }
             }
           ],
-          "Name": "News",
+          "Name": "Politics",
           "Properties": {}
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": false,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 7,10,13,16 * * ?"
+          },
+          "LastExecution": "2021-04-28T21:37:27.7203507-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Inoreader Firefox",
+          "Properties": {
+            "Url": "http://www.inoreader.com/dashboard"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": false,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 1 7,10,13,16 ? * MON-FRI"
+          },
+          "LastExecution": "2021-04-28T21:37:27.722675-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Reddit",
+          "Properties": {
+            "Url": "https://www.reddit.com/"
+          }
+        },
+        {
+          "TemplateID": 7,
+          "IsActive": false,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 7,9,11,13,15,17 * * ?"
+          },
+          "LastExecution": "2021-04-28T21:37:27.7280701-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Inoreader Edge",
+          "Properties": {
+            "Url": "http://www.inoreader.com/dashboard"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 14 ? * FRI"
+          },
+          "LastExecution": "2021-04-30T14:00:00.0245586-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Reddit List",
+          "Properties": {
+            "Url": "http://redditlist.com/"
+          }
+        },
+        {
+          "ChildItems": [
+            {
+              "TemplateID": 1,
+              "IsActive": true,
+              "Trigger": {
+                "TriggerType": "CronTrigger",
+                "CronExpression": "0 0 8 * * ?"
+              },
+              "LastExecution": "2021-05-05T08:00:00.0335539-05:00",
+              "AllowLaunchOnStartup": true,
+              "Name": "Wunderground Mckinney",
+              "Properties": {
+                "Url": "https://www.wunderground.com/weather/us/tx/mckinney/KTXMCKIN31"
+              }
+            }
+          ],
+          "Name": "Weather",
+          "Properties": {}
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 15 12 ? * MON-FRI"
+          },
+          "LastExecution": "2021-05-05T12:15:00.0191062-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Covid TRacker",
+          "Properties": {
+            "Url": "https://covid.cdc.gov/covid-data-tracker/#datatracker-home"
+          }
         }
       ],
       "Name": "Informational",
@@ -1596,7 +1867,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 9 ? * MON-FRI"
           },
-          "LastExecution": "2020-10-02T09:00:00.1157906-05:00",
+          "LastExecution": "2021-05-05T09:00:00.0265577-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Microsoft Virtual Academy",
           "Properties": {
@@ -1610,7 +1881,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 20 10 ? * 5"
           },
-          "LastExecution": "2020-10-01T13:32:14.639453-05:00",
+          "LastExecution": "2021-04-30T10:20:00.008493-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "All 3D",
           "Properties": {
@@ -1624,7 +1895,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 10 ? * 5"
           },
-          "LastExecution": "2020-10-01T13:32:14.652669-05:00",
+          "LastExecution": "2021-04-30T10:00:00.0123366-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Microsoft Learning",
           "Properties": {
@@ -1638,7 +1909,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 15 9 ? * MON-FRI"
           },
-          "LastExecution": "2020-10-02T09:15:00.0926544-05:00",
+          "LastExecution": "2021-05-05T09:15:00.0076686-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Khan Academy",
           "Properties": {
@@ -1654,7 +1925,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 7 ? * MON-FRI"
               },
-              "LastExecution": "2020-10-02T07:00:00.1451382-05:00",
+              "LastExecution": "2021-05-05T07:00:00.0174618-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Codeless Code",
               "Properties": {
@@ -1668,7 +1939,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 15 8 ? * MON,THU"
               },
-              "LastExecution": "2020-10-01T13:32:14.6779409-05:00",
+              "LastExecution": "2021-05-03T08:15:00.0093888-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "EDX education",
               "Properties": {
@@ -1682,7 +1953,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 10 ? * TUE,THU"
               },
-              "LastExecution": "2020-10-01T13:32:14.6890026-05:00",
+              "LastExecution": "2021-05-04T10:00:00.0176955-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "AWS",
               "Properties": {
@@ -1696,7 +1967,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 10 ? * TUE,THU"
               },
-              "LastExecution": "2020-10-01T13:32:14.6905234-05:00",
+              "LastExecution": "2021-05-04T10:00:00.012364-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Programmable Web",
               "Properties": {
@@ -1714,7 +1985,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 13 ? * 5"
           },
-          "LastExecution": "2020-10-01T13:32:14.6973982-05:00",
+          "LastExecution": "2021-04-30T13:00:00.019166-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Thingiverse",
           "Properties": {
@@ -1728,7 +1999,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 14 ? * FRI"
           },
-          "LastExecution": "2020-10-01T13:32:14.7047047-05:00",
+          "LastExecution": "2021-04-30T14:00:00.0315893-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "McKinney ISD Portal",
           "Properties": {
@@ -1742,7 +2013,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "20 1 8 * * ?"
           },
-          "LastExecution": "2020-10-02T08:01:20.4459442-05:00",
+          "LastExecution": "2021-05-05T08:01:20.0356099-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "McKinneyISD Help Center",
           "Properties": {
@@ -1756,7 +2027,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 30 9 ? * MON-FRI"
           },
-          "LastExecution": "2020-10-02T09:30:00.1424281-05:00",
+          "LastExecution": "2021-05-05T09:30:00.0154384-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Azure Developer Certification",
           "Properties": {
@@ -1772,7 +2043,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "25 1 8 * * ?"
               },
-              "LastExecution": "2020-10-02T08:01:25.3090259-05:00",
+              "LastExecution": "2021-05-05T08:01:25.0839633-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Dew Drop",
               "Properties": {
@@ -1786,7 +2057,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "30 1 8 * * ?"
               },
-              "LastExecution": "2020-10-02T08:01:30.2279689-05:00",
+              "LastExecution": "2021-05-05T08:01:30.3659823-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "The Morning Brew",
               "Properties": {
@@ -1800,7 +2071,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "35 1 8 * * ?"
               },
-              "LastExecution": "2020-10-02T08:01:35.3640736-05:00",
+              "LastExecution": "2021-05-05T08:01:35.0231317-05:00",
               "AllowLaunchOnStartup": true,
               "Name": ".Net App Developer Links",
               "Properties": {
@@ -1814,7 +2085,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 * * * ?"
               },
-              "LastExecution": "2020-10-01T13:32:14.7283654-05:00",
+              "LastExecution": "2021-04-28T21:37:27.7601139-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Dew Drop RSS",
               "Properties": {
@@ -1828,7 +2099,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 * * * ?"
               },
-              "LastExecution": "2020-10-01T13:32:14.7297578-05:00",
+              "LastExecution": "2021-04-28T21:37:27.7639471-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Morning Brew RSS",
               "Properties": {
@@ -1842,7 +2113,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 * * * ?"
               },
-              "LastExecution": "2020-10-01T13:32:14.7696093-05:00",
+              "LastExecution": "2021-04-28T21:37:27.7773478-05:00",
               "AllowLaunchOnStartup": true,
               "Name": ".Net App Developer Links RSS",
               "Properties": {
@@ -1856,7 +2127,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 * * * ?"
               },
-              "LastExecution": "2020-10-01T13:32:14.7911194-05:00",
+              "LastExecution": "2021-04-28T21:37:27.781543-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "A Fresh Cup",
               "Properties": {
@@ -1870,7 +2141,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 * * * ?"
               },
-              "LastExecution": "2020-10-01T13:32:14.7927146-05:00",
+              "LastExecution": "2021-04-28T21:37:27.7847689-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Franky's Notes",
               "Properties": {
@@ -1884,7 +2155,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 * * * ?"
               },
-              "LastExecution": "2020-10-01T13:32:14.8277002-05:00",
+              "LastExecution": "2021-04-28T21:37:27.7935717-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "The Daily WTF",
               "Properties": {
@@ -1894,6 +2165,20 @@
           ],
           "Name": "Software Link Sites",
           "Properties": {}
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 10 9 ? * MON-FRI"
+          },
+          "LastExecution": "2021-05-05T09:10:00.0087636-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Whispersteppe GitHub",
+          "Properties": {
+            "Url": "https://github.com/Whispersteppe"
+          }
         }
       ],
       "Name": "Education",
@@ -1908,7 +2193,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 14 ? * 1"
           },
-          "LastExecution": "2020-10-01T13:32:14.8320597-05:00",
+          "LastExecution": "2021-05-03T14:00:00.0134676-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Troop 406",
           "Properties": {
@@ -1922,11 +2207,11 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 14 ? * MON,WED,FRI"
           },
-          "LastExecution": "2020-10-01T13:32:14.854348-05:00",
+          "LastExecution": "2021-05-05T14:00:00.0494774-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Rank Requirements",
           "Properties": {
-            "Url": "http://www.usscouts.org/usscouts/advance/ScoutsBSA/rank3.asp"
+            "Url": "http://www.usscouts.org/usscouts/advance/ScoutsBSA/rank4.asp"
           }
         },
         {
@@ -1936,7 +2221,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 20 10 ? * 1"
           },
-          "LastExecution": "2020-10-01T13:32:14.8638148-05:00",
+          "LastExecution": "2021-05-03T10:20:00.0092467-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "US Scouts",
           "Properties": {
@@ -1948,41 +2233,13 @@
           "IsActive": true,
           "Trigger": {
             "TriggerType": "CronTrigger",
-            "CronExpression": "0 0 14 ? * 1"
-          },
-          "LastExecution": "2020-10-01T13:32:14.8656349-05:00",
-          "AllowLaunchOnStartup": true,
-          "Name": "Merit Badges",
-          "Properties": {
-            "Url": "http://meritbadge.org"
-          }
-        },
-        {
-          "TemplateID": 1,
-          "IsActive": true,
-          "Trigger": {
-            "TriggerType": "CronTrigger",
-            "CronExpression": "0 0 14 ? * 5"
-          },
-          "LastExecution": "2020-10-01T13:32:14.8673562-05:00",
-          "AllowLaunchOnStartup": true,
-          "Name": "Campmaster",
-          "Properties": {
-            "Url": "https://circle10.camp-master.com/default.aspx"
-          }
-        },
-        {
-          "TemplateID": 1,
-          "IsActive": true,
-          "Trigger": {
-            "TriggerType": "CronTrigger",
             "CronExpression": "0 30 8 ? * MON,FRI"
           },
-          "LastExecution": "2020-10-02T08:30:00.1291999-05:00",
+          "LastExecution": "2021-05-03T08:30:00.0253017-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Scoutbook",
           "Properties": {
-            "Url": "https://www.scoutbook.com/mobile/"
+            "Url": "https://scoutbook.scouting.org/mobile"
           }
         },
         {
@@ -1992,7 +2249,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 15 8 ? * MON,FRI"
           },
-          "LastExecution": "2020-10-02T08:15:00.0881004-05:00",
+          "LastExecution": "2021-05-03T08:15:00.0206879-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Trails End Popcorn",
           "Properties": {
@@ -2006,7 +2263,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 15 ? * TUE,FRI"
           },
-          "LastExecution": "2020-10-01T13:32:14.8720087-05:00",
+          "LastExecution": "2021-05-04T15:00:00.0285173-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Requirements Drop box",
           "Properties": {
@@ -2020,7 +2277,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 14 ? * MON,WED,FRI"
           },
-          "LastExecution": "2020-10-01T13:32:14.873706-05:00",
+          "LastExecution": "2021-05-05T14:00:00.0522075-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Scout Requirements",
           "Properties": {
@@ -2034,7 +2291,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 0 11 ? * 5"
           },
-          "LastExecution": "2020-10-01T13:32:14.8756086-05:00",
+          "LastExecution": "2021-04-30T11:00:00.0203241-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Geocaching",
           "Properties": {
@@ -2048,7 +2305,7 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "40 1 8 ? * FRI"
           },
-          "LastExecution": "2020-10-02T08:01:40.1402167-05:00",
+          "LastExecution": "2021-04-30T08:01:40.0103203-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "North Texas Orienteering",
           "Properties": {
@@ -2065,12 +2322,12 @@
           "ChildItems": [
             {
               "TemplateID": 1,
-              "IsActive": true,
+              "IsActive": false,
               "Trigger": {
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 13 ? * 5"
               },
-              "LastExecution": "2020-10-01T13:32:14.8783266-05:00",
+              "LastExecution": "2021-04-28T21:37:27.8130866-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Indeed Architect",
               "Properties": {
@@ -2079,12 +2336,12 @@
             },
             {
               "TemplateID": 1,
-              "IsActive": true,
+              "IsActive": false,
               "Trigger": {
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 13 ? * 5"
               },
-              "LastExecution": "2020-10-01T13:32:14.8797936-05:00",
+              "LastExecution": "2021-04-28T21:37:27.815287-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Monster SE",
               "Properties": {
@@ -2093,12 +2350,12 @@
             },
             {
               "TemplateID": 1,
-              "IsActive": true,
+              "IsActive": false,
               "Trigger": {
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 13 ? * 5"
               },
-              "LastExecution": "2020-10-01T13:32:14.9149817-05:00",
+              "LastExecution": "2021-04-28T21:37:27.8210248-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Indeed SE",
               "Properties": {
@@ -2107,12 +2364,12 @@
             },
             {
               "TemplateID": 1,
-              "IsActive": true,
+              "IsActive": false,
               "Trigger": {
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 13 ? * 5"
               },
-              "LastExecution": "2020-10-01T13:32:14.9168512-05:00",
+              "LastExecution": "2021-04-28T21:37:27.8266059-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Monster Architectt",
               "Properties": {
@@ -2121,12 +2378,12 @@
             },
             {
               "TemplateID": 1,
-              "IsActive": true,
+              "IsActive": false,
               "Trigger": {
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 13 ? * TUE,FRI"
               },
-              "LastExecution": "2020-10-01T13:32:14.9185886-05:00",
+              "LastExecution": "2021-04-28T21:37:27.8287715-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Be Seen@Indeed",
               "Properties": {
@@ -2135,12 +2392,12 @@
             },
             {
               "TemplateID": 1,
-              "IsActive": true,
+              "IsActive": false,
               "Trigger": {
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 14 ? * 5"
               },
-              "LastExecution": "2020-10-01T13:32:14.9461223-05:00",
+              "LastExecution": "2021-04-28T21:37:27.8327501-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Zip Recruiter",
               "Properties": {
@@ -2149,12 +2406,12 @@
             },
             {
               "TemplateID": 1,
-              "IsActive": true,
+              "IsActive": false,
               "Trigger": {
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 13 ? * TUE,FRI"
               },
-              "LastExecution": "2020-10-01T13:32:14.9530137-05:00",
+              "LastExecution": "2021-04-28T21:37:27.838521-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "CareerBuilder Architect",
               "Properties": {
@@ -2172,11 +2429,25 @@
             "TriggerType": "CronTrigger",
             "CronExpression": "0 1 8-19 ? * MON-FRI"
           },
-          "LastExecution": "2020-10-01T13:32:14.9574252-05:00",
+          "LastExecution": "2021-04-28T21:37:27.8437945-05:00",
           "AllowLaunchOnStartup": true,
           "Name": "Fark.Com Business",
           "Properties": {
             "Url": "http://www.fark.com/business/fark.rss"
+          }
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 10 ? * FRI"
+          },
+          "LastExecution": "2021-04-30T10:00:00.027855-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Acclaim",
+          "Properties": {
+            "Url": "https://www.youracclaim.com/users/chris-arterburn/badges"
           }
         }
       ],
@@ -2194,7 +2465,7 @@
                 "TriggerType": "CronTrigger",
                 "CronExpression": "0 0 9 ? * MON-FRI"
               },
-              "LastExecution": "2020-10-02T09:00:01.4998926-05:00",
+              "LastExecution": "2021-05-05T09:00:01.2746549-05:00",
               "AllowLaunchOnStartup": true,
               "Name": "Todo List",
               "Properties": {
@@ -2204,6 +2475,20 @@
           ],
           "Name": "HabitLog",
           "Properties": {}
+        },
+        {
+          "TemplateID": 1,
+          "IsActive": true,
+          "Trigger": {
+            "TriggerType": "CronTrigger",
+            "CronExpression": "0 0 9 ? * FRI"
+          },
+          "LastExecution": "2021-04-30T09:00:01.1465493-05:00",
+          "AllowLaunchOnStartup": true,
+          "Name": "Online Collab tools",
+          "Properties": {
+            "Url": "https://blog.lucidmeetings.com/blog/25-tools-for-online-brainstorming-and-decision-making-in-meetings"
+          }
         }
       ],
       "Name": "Projects",

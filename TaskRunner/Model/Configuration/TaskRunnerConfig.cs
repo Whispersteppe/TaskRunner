@@ -68,11 +68,32 @@ namespace TaskRunner.Model.Configuration
 
                 File.Copy(filePath, backupFileName);
 
-                
+                DateTime expirationDate = DateTime.Now.AddDays(-30);
+                //  clean up old backups
+                var backupList = Directory.GetFiles(path, "TaskRunner - backup*.json");
+                foreach(var backupItem in backupList)
+                {
+                    if (File.GetCreationTime(backupItem) < expirationDate)
+                    {
+                        File.Delete(backupItem);
+                    }
+                }
+
+                var logList = Directory.GetFiles(path, "*.log");
+                foreach (var logItem in logList)
+                {
+                    if (File.GetCreationTime(logItem) < expirationDate)
+                    {
+                        File.Delete(logItem);
+                    }
+                }
+
+
             }
 
             File.WriteAllText(filePath, configData);
         }
+
 
         /// <summary>
         /// get the config

@@ -14,6 +14,7 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
         <Label Content="Folder" Grid.Row="0" Grid.Column="0" />
@@ -22,6 +23,7 @@
         <Label Content="{Binding Path=Name}"  HorizontalAlignment="Left" MinWidth="100" Grid.Row="1" Grid.Column="1" />
 
         <Button Content="Edit" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Click="Button_Edit_Click" />
+        <Button Content="Delete" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Click="DeleteTaskClick" />
 
     </Grid>
 </UserControl>
