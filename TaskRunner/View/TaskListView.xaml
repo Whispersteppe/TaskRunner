@@ -28,11 +28,14 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-
+        
+        <TextBox Name="SearchText" Grid.Column="0" Grid.Row="0" TextChanged="SearchText_TextChanged" />
+      
         <TreeView Name="folderList" ItemsSource="{Binding Path=TaskTreeItems}" Grid.Column="0"
-                  Grid.Row="0" MinWidth="80" AllowDrop="True"
+                  Grid.Row="1" MinWidth="80" AllowDrop="True"
                   PreviewMouseDown="FolderList_MouseDown"
                   PreviewMouseMove="FolderList_MouseMove"
                   Drop="FolderList_Drop"
@@ -48,6 +51,7 @@
                     <Setter Property="ContextMenu" Value="{StaticResource ItemActionPopup}" />
                     <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
                     <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                    <Setter Property="Visibility" Value="{Binding Visibility, Mode=TwoWay}" />
                 </Style>
             </TreeView.ItemContainerStyle>
             <TreeView.ItemTemplate>
@@ -57,6 +61,6 @@
             </TreeView.ItemTemplate>
         </TreeView>
 
-        <ContentControl Grid.Column="1" Grid.Row="0" Content="{Binding ElementName=folderList, Path=SelectedItem}" />
+        <ContentControl Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Content="{Binding ElementName=folderList, Path=SelectedItem}" />
     </Grid>
 </UserControl>

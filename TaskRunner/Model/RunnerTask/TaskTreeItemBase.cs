@@ -37,6 +37,7 @@ namespace TaskRunner.Model.RunnerTask
         /// indicator that the item is expanded
         /// </summary>
         bool _isExpanded = false;
+        Visibility _isVisible = Visibility.Visible;
 
 
         /// <summary>
@@ -77,6 +78,12 @@ namespace TaskRunner.Model.RunnerTask
             }
         }
 
+        public virtual bool MatchSearch(string text)
+        {
+            if (Name.Contains(text, System.StringComparison.InvariantCultureIgnoreCase)) return true;
+
+            return false;
+        }
 
         /// <summary>
         /// get and set the parent.  allows moving of the item within the tree
@@ -172,11 +179,31 @@ namespace TaskRunner.Model.RunnerTask
             set
             {
                 _isExpanded = value;
-                if (Parent != null)
+                if (Parent != null && value == true)
                 {
                     Parent.IsExpanded = true;
                 }
                 OnPropertyChanged(nameof(IsExpanded));
+            }
+        }
+
+        public Visibility Visibility
+        {
+            get
+            {
+                return _isVisible;
+            }
+            set
+            {
+                _isVisible = value;
+                if (Parent != null)
+                {
+                    if (value != Visibility.Collapsed)
+                    {
+                        Parent.Visibility = Visibility.Visible;
+                    }
+                }
+                OnPropertyChanged(nameof(Visibility));
             }
         }
 

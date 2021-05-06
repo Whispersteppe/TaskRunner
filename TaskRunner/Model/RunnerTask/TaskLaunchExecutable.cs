@@ -96,6 +96,11 @@ namespace TaskRunner.Model.RunnerTask
             }
         }
 
+        public override bool MatchSearch(string text)
+        {
+            if (CommandLine.Contains(text, System.StringComparison.InvariantCultureIgnoreCase)) return true;
+            return base.MatchSearch(text);
+        }
 
     }
 }

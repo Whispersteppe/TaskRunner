@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
 using System.Windows;
@@ -226,5 +227,83 @@ namespace TaskRunner.View
 
         #endregion
 
+        private void SearchText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (SearchText.Text.Length == 0)
+            {
+                ClearIsVisible();
+            }
+            else
+            {
+                SearchAndMark(SearchText.Text);
+            }
+
+        }
+
+
+        private void SearchAndMark(string text)
+        {
+            foreach (var item in TaskRunnerController.Current.TaskTreeItems)
+            {
+                var childVisibility = SearchAndMark(item, text);
+                if (childVisibility == Visibility.Visible)
+                {
+                    item.Visibility = Visibility.Visible;
+                    item.IsExpanded = true;
+                }
+            }
+        }
+
+        private Visibility SearchAndMark(TaskTreeItemBase item, string text)
+        {
+            if (item.MatchSearch(text))
+            {
+                item.Visibility = Visibility.Visible;
+                item.IsExpanded = true;
+            }
+            else
+            {
+                item.Visibility = Visibility.Collapsed;
+                item.IsExpanded = false;
+            }
+
+
+            if (item.ChildItems == null) return item.Visibility;
+
+            foreach (var childItem in item.ChildItems)
+            {
+                var childVisibility = SearchAndMark(childItem, text);
+                if (childVisibility == Visibility.Visible)
+                {
+                    item.Visibility = Visibility.Visible;
+                    item.IsExpanded = true;
+                }
+            }
+
+            return item.Visibility;
+
+        }
+
+
+        private void ClearIsVisible()
+        {
+            foreach(var item in TaskRunnerController.Current.TaskTreeItems)
+            {
+                item.Visibility = Visibility.Visible;
+                ClearIsVisible(item.ChildItems);
+                item.IsExpanded = false;
+            }
+        }
+        private void ClearIsVisible(ObservableCollection<TaskTreeItemBase> childItems)
+        {
+            if (childItems == null) return;
+
+            foreach (var item in childItems)
+            {
+                item.Visibility = Visibility.Visible;
+                item.IsExpanded = false;
+                ClearIsVisible(item.ChildItems);
+            }
+        }
     }
 }
