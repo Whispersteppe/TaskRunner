@@ -41,6 +41,9 @@ namespace TaskRunner.View
             var task = DataContext as TaskTreeItemBase;
             task.RefreshToConfig();
 
+            var parentWindow = Window.GetWindow(this);
+            if (parentWindow != null) parentWindow.Close();
+
         }
     }
 }
