@@ -78,8 +78,19 @@ namespace TaskRunner.View
 
         }
 
+        private void CopyTaskClick(object sender, RoutedEventArgs e)
+        {
+            var task = DataContext as TaskTreeItemBase;
+            if (task != null)
+            {
+                //  we don't copy folders
+                if (task is TaskFolder) return;
 
-        public T FindParentItem<T>(DependencyObject item) where T: DependencyObject
+                task.Copy_Click(sender, e);
+            }
+        }
+
+            public T FindParentItem<T>(DependencyObject item) where T: DependencyObject
         {
             DependencyObject currentItem = item; 
             while (currentItem != null)

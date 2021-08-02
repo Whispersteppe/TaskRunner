@@ -32,13 +32,13 @@
             <TextBlock Text="{Binding Path=Scheduler.TotalTaskLaunches}" />
             <Separator />
             <TextBlock Text="Next Launch:" />
-            <TextBlock Text="{Binding Path=Scheduler.NextTaskLaunch, StringFormat=M/d/yyyy HH:mm:ss}" />
+            <TextBlock Text="{Binding Path=Scheduler.NextTaskLaunchString}" />
             <Separator />
             <TextBlock Text="Last Launch:" />
-            <TextBlock Text="{Binding Path=Scheduler.LastTaskLaunch, StringFormat=M/d/yyyy HH:mm:ss}" />
+            <TextBlock Text="{Binding Path=Scheduler.LastTaskLaunchString}" />
             <Separator />
             <TextBlock Text="Countdown:" />
-            <TextBlock Text="{Binding Path=Scheduler.NextTaskLaunchCountdown,  StringFormat=\{0:h\\:mm\\:ss\}}" />
+            <TextBlock Text="{Binding Path=Scheduler.NextTaskLaunchCountdownString}" />
 
         </StatusBar>
         

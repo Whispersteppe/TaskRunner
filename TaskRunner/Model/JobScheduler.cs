@@ -39,7 +39,13 @@ namespace TaskRunner.Model
 
         public DateTime NextTaskLaunch { get; private set; } = DateTime.MaxValue;
 
-
+        public string NextTaskLaunchString
+        {
+            get
+            {
+                return NextTaskLaunch.ToString("M/d/yyyy HH:mm:ss");
+            }
+        }
         public async Task ResetNextExecuteTime()
         {
             NextTaskLaunch = DateTime.MaxValue;
@@ -60,6 +66,9 @@ namespace TaskRunner.Model
             OnPropertyChanged(nameof(NextTaskLaunch));
             OnPropertyChanged(nameof(TotalUpTimeString));
             OnPropertyChanged(nameof(NextTaskLaunchCountdown));
+            OnPropertyChanged(nameof(NextTaskLaunchCountdownString));
+            OnPropertyChanged(nameof(NextTaskLaunchString));
+            OnPropertyChanged(nameof(LastTaskLaunchString));
         }
 
         public TimeSpan NextTaskLaunchCountdown
@@ -69,6 +78,14 @@ namespace TaskRunner.Model
                 if (NextTaskLaunch > DateTime.Now) return NextTaskLaunch - DateTime.Now;
 
                 return new TimeSpan(0, 0, 0);
+            }
+        }
+
+        public string NextTaskLaunchCountdownString
+        {
+            get
+            {
+                return NextTaskLaunchCountdown.ToString("h':'mm':'ss");
             }
         }
 
@@ -84,7 +101,20 @@ namespace TaskRunner.Model
                 OnPropertyChanged(nameof(LastTaskLaunch));
                 OnPropertyChanged(nameof(TotalUpTime));
                 OnPropertyChanged(nameof(TotalUpTimeString));
+                OnPropertyChanged(nameof(NextTaskLaunchCountdownString));
+                OnPropertyChanged(nameof(NextTaskLaunchString));
+                OnPropertyChanged(nameof(LastTaskLaunchString));
+                Task.Run(async () => { await ResetNextExecuteTime(); });
+                
 
+            }
+        }
+
+        public string LastTaskLaunchString
+        {
+            get
+            {
+                return LastTaskLaunch.ToString("M/d/yyyy HH:mm:ss");
             }
         }
 
@@ -189,6 +219,11 @@ namespace TaskRunner.Model
             OnPropertyChanged(nameof(TotalUpTime));
             OnPropertyChanged(nameof(TotalUpTimeString));
             OnPropertyChanged(nameof(NextTaskLaunchCountdown));
+            OnPropertyChanged(nameof(LastTaskLaunch));
+            OnPropertyChanged(nameof(NextTaskLaunch));
+            OnPropertyChanged(nameof(NextTaskLaunchCountdownString));
+            OnPropertyChanged(nameof(NextTaskLaunchString));
+            OnPropertyChanged(nameof(LastTaskLaunchString));
         }
 
         /// <summary>

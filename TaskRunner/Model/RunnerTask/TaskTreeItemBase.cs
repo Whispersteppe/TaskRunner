@@ -247,7 +247,7 @@ namespace TaskRunner.Model.RunnerTask
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Copy_Click(object sender, System.Windows.RoutedEventArgs e)
+        public void Copy_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             var newItem = TaskRunnerController.Current.TaskTreeItems.CloneItem(this);
 
