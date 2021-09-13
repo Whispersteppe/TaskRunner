@@ -63,12 +63,21 @@ namespace TaskRunner.Model
                 }
             }
 
+            TriggerPropertyChanged();
+        }
+
+
+        public void TriggerPropertyChanged()
+        {
+            OnPropertyChanged(nameof(LastTaskLaunch));
+            OnPropertyChanged(nameof(LastTaskLaunchString));
             OnPropertyChanged(nameof(NextTaskLaunch));
-            OnPropertyChanged(nameof(TotalUpTimeString));
             OnPropertyChanged(nameof(NextTaskLaunchCountdown));
             OnPropertyChanged(nameof(NextTaskLaunchCountdownString));
             OnPropertyChanged(nameof(NextTaskLaunchString));
-            OnPropertyChanged(nameof(LastTaskLaunchString));
+            OnPropertyChanged(nameof(TotalTaskLaunches));
+            OnPropertyChanged(nameof(TotalUpTime));
+            OnPropertyChanged(nameof(TotalUpTimeString));
         }
 
         public TimeSpan NextTaskLaunchCountdown
@@ -98,12 +107,9 @@ namespace TaskRunner.Model
             set
             {
                 _lastTaskLaunch = value;
-                OnPropertyChanged(nameof(LastTaskLaunch));
-                OnPropertyChanged(nameof(TotalUpTime));
-                OnPropertyChanged(nameof(TotalUpTimeString));
-                OnPropertyChanged(nameof(NextTaskLaunchCountdownString));
-                OnPropertyChanged(nameof(NextTaskLaunchString));
-                OnPropertyChanged(nameof(LastTaskLaunchString));
+
+                TriggerPropertyChanged();
+
                 Task.Run(async () => { await ResetNextExecuteTime(); });
                 
 
@@ -163,9 +169,9 @@ namespace TaskRunner.Model
             set
             {
                 _totalTaskLaunches = value;
-                OnPropertyChanged(nameof(TotalTaskLaunches));
-                OnPropertyChanged(nameof(TotalUpTime));
-                OnPropertyChanged(nameof(TotalUpTimeString));
+
+                TriggerPropertyChanged();
+
             }
         }
         
@@ -216,14 +222,7 @@ namespace TaskRunner.Model
 
         private void _updateTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            OnPropertyChanged(nameof(TotalUpTime));
-            OnPropertyChanged(nameof(TotalUpTimeString));
-            OnPropertyChanged(nameof(NextTaskLaunchCountdown));
-            OnPropertyChanged(nameof(LastTaskLaunch));
-            OnPropertyChanged(nameof(NextTaskLaunch));
-            OnPropertyChanged(nameof(NextTaskLaunchCountdownString));
-            OnPropertyChanged(nameof(NextTaskLaunchString));
-            OnPropertyChanged(nameof(LastTaskLaunchString));
+            TriggerPropertyChanged();
         }
 
         /// <summary>
@@ -263,6 +262,7 @@ namespace TaskRunner.Model
                 await LoadJobs(_parent.TaskTreeItems.ToList());
             }
 
+            TriggerPropertyChanged();
 
         }
 
@@ -306,6 +306,9 @@ namespace TaskRunner.Model
                 }
 
             });
+
+            TriggerPropertyChanged();
+
         }
 
         /// <summary>
@@ -321,6 +324,9 @@ namespace TaskRunner.Model
             {
                 task.LastExecuteTime = DateTime.Now;
             }
+
+            TriggerPropertyChanged();
+
         }
 
         /// <summary>
@@ -341,6 +347,9 @@ namespace TaskRunner.Model
                 }
 
             });
+
+            TriggerPropertyChanged();
+
         }
 
         /// <summary>
@@ -368,6 +377,9 @@ namespace TaskRunner.Model
                     JobDetails.Add(item);
                 }
             });
+
+            TriggerPropertyChanged();
+
         }
 
 
@@ -416,6 +428,9 @@ namespace TaskRunner.Model
                 await task.Execute(null);
             }
 
+            TriggerPropertyChanged();
+
+
         }
 
         public async Task PauseJob(TaskBase task)
@@ -423,12 +438,16 @@ namespace TaskRunner.Model
             JobKey k = new JobKey(task.ID);
             await _scheduler.PauseJob(k);
 
+            TriggerPropertyChanged();
+
         }
 
         public async Task ResumeJob(TaskBase task)
         {
             JobKey k = new JobKey(task.ID);
             await _scheduler.ResumeJob(k);
+
+            TriggerPropertyChanged();
 
         }
 
@@ -447,6 +466,8 @@ namespace TaskRunner.Model
             JobKey k = new JobKey(task.ID);
             var rslt = await _scheduler.DeleteJob(k);
 
+            TriggerPropertyChanged();
+
             return rslt;
         }
 
@@ -455,6 +476,9 @@ namespace TaskRunner.Model
 
             await DeleteJob(task);
             await ScheduleJob(task);
+
+            TriggerPropertyChanged();
+
 
         }
 
@@ -471,6 +495,9 @@ namespace TaskRunner.Model
             }
 
             await ResetNextExecuteTime();
+
+            TriggerPropertyChanged();
+
         }
 
         /// <summary>
@@ -500,6 +527,9 @@ namespace TaskRunner.Model
                     _logger.LogError(e, "error starting job");
                 }
             }
+
+            TriggerPropertyChanged();
+
         }
 
 
@@ -510,6 +540,8 @@ namespace TaskRunner.Model
             string id = bundle.JobDetail.JobDataMap.GetString("ID");
 
             var task = _parent.TaskTreeItems.FindTaskByID(id);
+
+            TriggerPropertyChanged();
 
             return task;
         }
