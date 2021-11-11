@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -37,6 +38,15 @@ namespace TaskRunner.View
                 };
                 dlg.ShowDialog();
             }
+        }
+
+        private void LaunchAllTasksClick(object sender, RoutedEventArgs e)
+        {
+            var folder = DataContext as TaskFolder;
+
+            folder.Execute();
+
+      
         }
 
         private void DeleteTaskClick(object sender, RoutedEventArgs e)

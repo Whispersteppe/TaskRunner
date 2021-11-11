@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -17,7 +18,7 @@ namespace TaskRunner.Model.RunnerTask
     public class TaskFolder : TaskTreeItemBase
     {
         public TaskFolder(TaskFolderConfig config, TaskTreeItemBase parent)
-            :base(config, parent)
+            : base(config, parent)
         {
             ChildItems = new ObservableCollection<TaskTreeItemBase>();
         }
@@ -85,7 +86,7 @@ namespace TaskRunner.Model.RunnerTask
                 items.Add(newItem);
 
                 var taskItem = new MenuItem() { Header = "Add Task" };
-                foreach(var template in TaskRunnerController.Current.Templates)
+                foreach (var template in TaskRunnerController.Current.Templates)
                 {
                     newItem = new MenuItem { Header = template.Name, Tag = template };
                     newItem.Click += AddTask_Click;
@@ -134,6 +135,27 @@ namespace TaskRunner.Model.RunnerTask
             }
 
             return null;
+        }
+
+        public void Execute()
+        {
+
+            foreach(var item in ChildItems)
+            {
+                if (item is TaskFolder folder)
+                {
+                    folder.Execute();
+                }
+                else if (item is TaskBase task)
+                {
+                    Task.Run(async () =>
+                    {
+                        await task.Execute(null);
+                    }).Wait();
+
+                }
+            }
+
         }
     }
 }
